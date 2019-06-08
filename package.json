@@ -1,0 +1,36 @@
+{
+  "name": "my-boilerplate",
+  "version": "1.0.0",
+  "description": "My React boilerplate for new projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "/"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --hot --open --inline --progress",
+    "build": "cross-env NODE_ENV=production webpack --env production --config=webpack.config.js --progress -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eduard Trayt <eduard2011rus@gmail.com> (https://github.com/EdMSL)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "~7.4.5",
+    "@babel/preset-env": "~7.4.5",
+    "@babel/preset-react": "~7.0.0",
+    "babel-loader": "~8.0.6",
+    "cross-env": "~5.2.0",
+    "css-loader": "~2.1.1",
+    "react-hot-loader": "~4.9.0",
+    "style-loader": "~0.23.1",
+    "webpack": "~4.32.2",
+    "webpack-cli": "~3.3.2",
+    "webpack-dev-server": "~3.6.0",
+    "webpack-merge": "~4.2.1"
+  },
+  "dependencies": {
+    "react": "~16.8.6",
+    "react-dom": "~16.8.6"
+  }
+}
