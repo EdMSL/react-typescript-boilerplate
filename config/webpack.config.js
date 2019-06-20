@@ -1,12 +1,13 @@
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const getScopedName = require('../src/helpers/getScopedName');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const getScopedName = require('../src/helpers/getScopedName');
 
 const PATHS = {
-  src: path.join(__dirname, `../src`),
-  dist: path.join(__dirname, `../build`),
+  src: path.join(__dirname, `./src`),
+  dist: path.join(__dirname, `./build`),
   conf: path.join(__dirname, `./config`),
 };
 
@@ -18,7 +19,6 @@ const htmlPlugin = new HtmlWebpackPlugin({
   template: `${PATHS.src}/index.html`,
   filename: 'index.html',
   favicon: 'src/sprites/favicon.png',
-  css: 'src/styles/main.css',
   inject: false,
 });
 
@@ -26,6 +26,15 @@ const cssExtractPlugin = new MiniCssExtractPlugin({
   filename: 'css/styles.css',
   chunkFilename: 'css/[id].css',
 });
+
+const clean = new CleanWebpackPlugin();
+
+const plugins = [
+  new webpack.ProgressPlugin(),
+  clean,
+  htmlPlugin,
+  ...(isDevelopment ? [] : [cssExtractPlugin]),
+];
 
 const configuration = {
   entry: `${PATHS.src}/index.jsx`,
@@ -42,6 +51,7 @@ const configuration = {
       $containers: path.resolve(__dirname, `${PATHS.src}/containers/`),
       $modules: path.resolve(__dirname, `${PATHS.src}/modules/`),
       $styles: path.resolve(__dirname, `${PATHS.src}/styles/`),
+      $images: path.resolve(__dirname, `${PATHS.src}/images/`),
     },
     extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.json']
   },
@@ -56,16 +66,13 @@ const configuration = {
             options: {
               modules: true,
               sourceMap: true,
-              importLoaders: 0,
-              ...(isDevelopment ? {
-                localIdentName: '[local]',
-              } : {
-                getLocalIdent: (context, localIdentName, localName) => (
-                  getScopedName(localName, context.resourcePath)
-                ),
-              }),
               // url: false,
+              importLoaders: 0,
+              localIdentName: '[local]',
             },
+          },
+          {
+            loader: "resolve-url-loader"
           },
         ]
       },
@@ -123,10 +130,14 @@ const configuration = {
         }
       },
       {
-        test: /\.(png|svg)$/,
+        test: /\.(png|jpg|svg)$/,
+        include: `${PATHS.src}/images/`,
         use: {
           loader: 'file-loader',
-          options: {}
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
         }
       }
     ]
@@ -140,10 +151,7 @@ const configuration = {
     historyApiFallback: true,
   },
   devtool,
-  plugins: [
-    htmlPlugin,
-    ...(isDevelopment ? [] : cssExtractPlugin),
-  ]
+  plugins,
 };
 
 module.exports = configuration;

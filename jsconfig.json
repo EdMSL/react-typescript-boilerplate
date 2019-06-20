@@ -4,7 +4,7 @@
     "outDir": "./build/",
     "sourceMap": true,
     "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": false,
     "module": "commonjs",
     "target": "es6",
     "jsx": "react",
@@ -15,12 +15,12 @@
       "$components/*": [ "src/components/*" ],
       "$containers/*": [ "src/containers/*" ],
       "$modules/*": [ "src/modules/*" ],
-      "$styles/*": [ "src/styles/*" ]
+      "$styles/*": [ "src/styles/*" ],
+      "$images/*": [ "src/images/*" ]
     }
   },
   "include": [
     "./src/**/*",
-    "./custom.d.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "./build/**/*"]
 }

@@ -11,6 +11,7 @@ class App extends Component {
         <New />
         <Second />
         <Third />
+        <Logo />
       </div>
     );
   }

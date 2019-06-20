@@ -37,27 +37,27 @@
   "settings": {
     "import/resolver": {
       "webpack": {
-        "webpack.config.js": {
-          "resolve": {
-            "alias": {
-              "$containers": "src/containers",
-              "$components": "src/components",
-              "$modules": "src/modules",
-              "$styles": "src/styles"
-            },
-            "extensions": [
-              ".js",
-              ".jsx",
-              "ts",
-              "tsx",
-              ".scss"
-            ],
-            "modules": [
-              "src",
-              "node_modules"
-            ]
-          }
+        "config": "./config/webpack.config.js",
+        "resolve": {
+          "alias": {
+            "$containers": "src/containers",
+            "$components": "src/components",
+            "$modules": "src/modules",
+            "$styles": "src/styles"
+          },
+          "extensions": [
+            ".js",
+            ".jsx",
+            "ts",
+            "tsx",
+            ".scss"
+          ],
+          "modules": [
+            "src",
+            "node_modules"
+          ]
         }
+
       }
     }
   }
