@@ -6,8 +6,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const getScopedName = require('../src/helpers/getScopedName');
 
 const PATHS = {
-  src: path.join(__dirname, `./src`),
-  dist: path.join(__dirname, `./build`),
+  src: path.join(__dirname, `../src`),
+  dist: path.join(__dirname, `../build`),
   conf: path.join(__dirname, `./config`),
 };
 

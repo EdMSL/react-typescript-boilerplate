@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { New } from '$components/New';
 import { Second } from '$components/Second';
 import { Third } from '$components/Third';
+import { Logo } from '$components/Logo';
 
 class App extends Component {
   render() {

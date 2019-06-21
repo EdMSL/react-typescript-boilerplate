@@ -41,16 +41,6 @@ module.exports = {
     'import/resolver': {
       webpack: {
         config: './config/webpack.config.js',
-        // config: {
-        //   resolve: {
-        //     alias: {
-        //     $containers: path.join(__dirname, 'src/containers'),
-        //     $components: path.join(__dirname, 'src/components'),
-        //     $modules: path.join(__dirname, 'src/modules'),
-        //     $styles: path.join(__dirname, 'src/styles'),
-        //     }
-        //   }
-        // }
       }
     }
   }
