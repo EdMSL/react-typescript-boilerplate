@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>My React App! Teshhsssst/</h1>
+        <h1 className="def">My React App! Teshhsssst/</h1>
         <New />
         <Second />
         <Third />

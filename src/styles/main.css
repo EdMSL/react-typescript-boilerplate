@@ -10,7 +10,12 @@ p {
 .fff{
   position: absolute;
   top: 0;
-  display: block;
   z-index: 1;
+  display: block;
   width: 100px;
+}
+
+.defClass {
+  color: #000000;
+  font-size: 12px;
 }
