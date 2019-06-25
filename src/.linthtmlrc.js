@@ -14,10 +14,18 @@ module.exports = {
   "attr-no-unsafe-char": true,
   "attr-order": [
     "class",
+    "type",
     "src",
     "href",
     "alt",
+    "name",
+    "value",
     "id",
+    "title",
+    "tabindex",
+    "required",
+    "checked",
+    "disabled",
   ],
   "attr-validate": true,
   "attr-bans": [
@@ -71,6 +79,7 @@ module.exports = {
     "size",
     "valign",
     "width",
+    "hidden",
   ],
   "tag-bans": [
     "acronym",
