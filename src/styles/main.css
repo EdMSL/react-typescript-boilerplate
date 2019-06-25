@@ -7,12 +7,22 @@ h1 {
 p {
 
 }
-.fff{
+
+
+.fff {
   position: absolute;
   top: 0;
   z-index: 1;
   display: block;
   width: 100px;
+
+  &:hover {
+    color: #000;
+  }
+
+  &::after {
+    color: #000;
+  }
 }
 
 .defClass {

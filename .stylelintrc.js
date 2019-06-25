@@ -1,4 +1,5 @@
 module.exports = {
+  "extends": "stylelint-config-airbnb",
   plugins: [
     "stylelint-order",
   ],
@@ -27,6 +28,29 @@ module.exports = {
       "severity": "warning",
       "ignoreUnits": ["%", "em", "rem"],
     }],
+    "order/order": [
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::(before|after)"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      },
+      {
+        "type": "rule",
+        "selector": "^&_"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      }
+    ],
     "order/properties-order": [
       "content",
       "position",
