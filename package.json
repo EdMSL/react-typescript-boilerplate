@@ -2,6 +2,9 @@
   "name": "my-react-typescript-boilerplate",
   "version": "1.0.0",
   "description": "My React boilerplate for new projects",
+  "author": "Eduard Trayt <eduard2011rus@gmail.com> (https://github.com/EdMSL)",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -26,9 +29,6 @@
     "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.config.js --progress -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Eduard Trayt <eduard2011rus@gmail.com> (https://github.com/EdMSL)",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "~7.4.5",
     "@babel/preset-env": "~7.4.5",
@@ -63,7 +63,6 @@
     "source-map-loader": "~0.2.4",
     "style-loader": "~0.23.1",
     "stylelint": "^10.1.0",
-    "stylelint-config-airbnb": "0.0.0",
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.8.0",
     "ts-node": "~8.2.0",

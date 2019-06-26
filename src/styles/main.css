@@ -3,29 +3,24 @@ h1 {
   background-color: #ffffff;
   opacity: 0.1;
 }
-
-p {
-
-}
-
-
+/*  */
 .fff {
   position: absolute;
-  top: 0;
+  top: calc(0px + 8px);
   z-index: 1;
   display: block;
   width: 100px;
+  font-family: 'Arial Black', serif;;
 
-  &:hover {
-    color: #000;
-  }
-
-  &::after {
-    color: #000;
-  }
 }
 
 .defClass {
   color: #000000;
-  font-size: 12px;
+  font-size: 12Px;;
 }
+p {
+
+}
+
+/*  */
+.defClass {}
