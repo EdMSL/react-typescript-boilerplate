@@ -25,7 +25,7 @@ module.exports = {
       "message": "No empty comment",
       "severity": "warning",
     }],
-    // "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-duplicate-properties": true,
     // "font-family-no-duplicate-names": true,
     // "font-family-no-missing-generic-family-keyword": [true, {
     //   "message": "Missing generic-family",
