@@ -1,4 +1,5 @@
 module.exports = {
+  extends: "stylelint-config-standard",
   plugins: [
     "stylelint-order",
   ],
@@ -24,34 +25,34 @@ module.exports = {
       "message": "No empty comment",
       "severity": "warning",
     }],
-    "declaration-block-no-duplicate-properties": true,
-    "font-family-no-duplicate-names": true,
-    "font-family-no-missing-generic-family-keyword": [true, {
-      "message": "Missing generic-family",
-    }],
-    "function-calc-no-invalid": true,
-    "function-linear-gradient-no-nonstandard-direction": true,
-    "media-feature-name-no-unknown": true,
-    "no-duplicate-at-import-rules": true,
-    "no-duplicate-selectors": true,
-    "no-extra-semicolons": [true, {
-      "message": "Dublicated semicolon",
-    }],
-    "no-invalid-double-slash-comments": true,
-    "number-leading-zero": ["always", {
-      "severity": "warning",
-      "message": "Missing leading zero."
-    }],
-    "number-max-precision": [1, {
-      "severity": "warning",
-      "ignoreUnits": ["%", "em", "rem"],
-    }],
-    "property-no-unknown": true,
-    "selector-pseudo-class-no-unknown": true,
-    "selector-pseudo-element-no-unknown": true,
-    "selector-type-no-unknown": true,
-    "string-no-newline": true,
-    "unit-no-unknown": true,
+    // "declaration-block-no-duplicate-properties": true,
+    // "font-family-no-duplicate-names": true,
+    // "font-family-no-missing-generic-family-keyword": [true, {
+    //   "message": "Missing generic-family",
+    // }],
+    // "function-calc-no-invalid": true,
+    // "function-linear-gradient-no-nonstandard-direction": true,
+    // "media-feature-name-no-unknown": true,
+    // "no-duplicate-at-import-rules": true,
+    // "no-duplicate-selectors": true,
+    // "no-extra-semicolons": [true, {
+    //   "message": "Dublicated semicolon",
+    // }],
+    // "no-invalid-double-slash-comments": true,
+    // "number-leading-zero": ["always", {
+    //   "severity": "warning",
+    //   "message": "Missing leading zero."
+    // }],
+    // "number-max-precision": [1, {
+    //   "severity": "warning",
+    //   "ignoreUnits": ["%", "em", "rem"],
+    // }],
+    // "property-no-unknown": true,
+    // "selector-pseudo-class-no-unknown": true,
+    // "selector-pseudo-element-no-unknown": true,
+    // "selector-type-no-unknown": true,
+    // "string-no-newline": true,
+    // "unit-no-unknown": true,
     "order/order": [
       "declarations",
       {
