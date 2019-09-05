@@ -26,9 +26,9 @@ module.exports = {
     'block-no-empty': [true, {
       'message': 'No empty rule blocks.',
     }],
-    // 'color-named': ['never', {
-    //   'message': 'No named (web) colors.',
-    // }],
+    'color-named': ['never', {
+      'message': 'No named (web) colors.',
+    }],
     'comment-no-empty': [true, {
       'message': 'No empty comment',
     }],
