@@ -1,0 +1,69 @@
+.box-sizing-content {
+  box-sizing: content-box;
+}
+
+:global(.modal) {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  &--closed {
+    display: none;
+  }
+}
+
+:global(.modal__overlay) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 95;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $overlay-color;
+}
+
+:global(.modal__body) {
+  position: relative;
+  z-index: 100;
+
+  padding: 10px;
+
+  text-align: center;
+
+  background-color: $bg-dark-color;
+
+  @media (min-width: $tablet-width) {
+    background-color: $bg-light-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-white-color;
+  }
+}
+
+:global(.visually-hidden:not(:focus)),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}

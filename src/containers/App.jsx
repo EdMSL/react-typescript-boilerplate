@@ -1,19 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { New } from '$components/New';
 import { Second } from '$components/Second';
 import { Third } from '$components/Third';
-import { Logo } from '$components/Logo';
+import { Modal } from '$components/Modal';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1 className="def">My React App! Teshhsssst/</h1>
-        <New />
-        <Second />
-        <Third />
-        <Logo />
-      </div>
+      <React.Fragment>
+        <div>
+          <h1 className="def">My React App! Teshhsssst/</h1>
+          <New />
+          <Second />
+          <Third />
+        </div>
+        <Modal />
+      </React.Fragment>
     );
   }
 }

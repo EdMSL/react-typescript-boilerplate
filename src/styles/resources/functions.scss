@@ -1,0 +1,19 @@
+/// Немного осветлить цвет
+/// @access public
+/// @param {Color} $color - цвет для осветления
+/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
+/// @return {Color}
+
+@function tint-func($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Немного затемнить цвет
+/// @access public
+/// @param {Color} $color - цвет для затемнения
+/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
+/// @return {Color}
+
+@function shade-func($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

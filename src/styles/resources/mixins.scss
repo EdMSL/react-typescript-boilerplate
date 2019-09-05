@@ -1,0 +1,19 @@
+@mixin main-text {
+  font-family: $main-font;
+  color: $text-main-color;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin reset-indents {
+  margin: 0;
+  padding: 0;
+}

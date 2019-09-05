@@ -12,15 +12,13 @@
     "baseUrl": ".",
     "paths": {
       "$root/*": [ "src/*" ],
-      "$components/*": [ "src/components/*" ],
-      "$containers/*": [ "src/containers/*" ],
-      "$modules/*": [ "src/modules/*" ],
+      "$js/*": [ "src/js/*" ],
       "$styles/*": [ "src/styles/*" ],
-      "$images/*": [ "src/images/*" ]
+      "$images/*": [ "src/images/*" ],
     }
   },
   "include": [
-    "./src/**/*",
+    "./src/**/*"
   ],
   "exclude": ["node_modules", "./build/**/*"]
 }
