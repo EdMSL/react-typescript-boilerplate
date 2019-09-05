@@ -24,10 +24,11 @@
     ]
   },
   "scripts": {
-    "stylelint": "stylelint src/styles/**/*.scss --config ./.stylelintrc-full.js",
+    "stylelint": "stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
+    "postcss": "postcss src/**/*.scss --config postcss.config.js --replace",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --config=./config/webpack.dev.config.js --progress",
     "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress",
-    "test": "npm run stylelint"
+    "test": "npm run postcss && npm run stylelint"
   },
   "husky": {
     "hooks": {
@@ -37,7 +38,7 @@
   "lint-staged": {
     "*.scss": [
       "prettier --write",
-      "stylelint --fix --config ./.stylelintrc-full.js",
+      "stylelint src/**/*.scss --fix --config ./.stylelintrc-full.js",
       "git add"
     ]
   },
@@ -80,7 +81,9 @@
     "node-sass": "^4.12.0",
     "normalize-scss": "*7.0.1",
     "path": "^0.12.7",
+    "postcss-cli": "6.1.3",
     "postcss-loader": "^3.0.0",
+    "postcss-scss": "2.0.0",
     "prettier": "^1.18.2",
     "sass-loader": "^8.0.0",
     "sass-resources-loader": "^2.0.1",

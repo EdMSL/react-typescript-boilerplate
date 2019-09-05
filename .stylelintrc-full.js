@@ -4,11 +4,11 @@ module.exports = {
     'stylelint-config-prettier',
   ],
   plugins: [
-    'stylelint-order',
     'stylelint-scss',
+    'stylelint-order',
     'stylelint-at-rule-no-children',
-    'stylelint-color-format',
     'stylelint-declaration-use-variable',
+    'stylelint-color-format',
   ],
   ignoreFiles: [
     'build/**/*'
@@ -51,6 +51,7 @@ module.exports = {
       'ignoreUnits': /^(?!px).*$/,
       'message': 'Value in px mast be integer number.',
     }],
+    'no-extra-semicolons': true, // --fix
     'no-unknown-animations': true,
     'property-no-vendor-prefix': [true, {
       'message': 'Not needed with autoprefixer',
