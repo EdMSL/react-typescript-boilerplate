@@ -8,8 +8,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div>
-          <h1 className="def">My React App! Teshhsssst/</h1>
+        <div className="main-wrapper">
           <New />
           <Second />
           <Third />

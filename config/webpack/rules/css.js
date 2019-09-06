@@ -52,7 +52,7 @@ module.exports = function(mode, resourcesPath) {
             sourceMap: mode === 'development',
             importLoaders: 3,
             modules: {
-              localIdentName: '[name]__[local]___[hash:base64:5]',
+              localIdentName: '[local]___[hash:base64:5]',
             },
           }),
         }

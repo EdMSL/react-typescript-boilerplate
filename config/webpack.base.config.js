@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 const fonts = require('./webpack/rules/fonts');
-const copyImages = require('./webpack/plugins/copy-images');
+// const copyImages = require('./webpack/plugins/copy-images');
 const copyFavicons = require('./webpack/plugins/copy-favicons');
 const generateHtmlPlugins = require('./webpack/plugins/html-webpack-plugin');
 
@@ -27,6 +27,7 @@ const configuration = merge([
       filename: 'js/index.js',
       sourceMapFilename: '[name].js.map',
       publicPath: '/',
+      futureEmitAssets: true,
     },
     externals: {
       paths: PATHS,
@@ -43,6 +44,9 @@ const configuration = merge([
       },
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       descriptionFiles: ['package.json'],
+    },
+    module: {
+      strictExportPresence: true,
     },
     stats: {
       all: false,

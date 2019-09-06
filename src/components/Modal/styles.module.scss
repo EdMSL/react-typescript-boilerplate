@@ -1,3 +1,54 @@
-p {
-  color: rgb(0, 0, 255);
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 95;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $overlay-color;
+}
+
+.modal__body {
+  position: relative;
+  z-index: 100;
+
+  padding: 10px;
+
+  text-align: center;
+
+  background-color: $bg-dark-color;
+
+  @media (min-width: $tablet-width) {
+    background-color: $bg-light-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-white-color;
+  }
+}
+
+.modal__title {
+  color: $text-main-color;
+}
+
+.modal__text {
+  color: $text-main-color;
 }
