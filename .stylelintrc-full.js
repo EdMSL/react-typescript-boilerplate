@@ -78,7 +78,7 @@ module.exports = {
       'format': 'rgb',
     },
     'sh-waqar/declaration-use-variable': [[
-      'color',
+      // 'color',
       'background-color',
       {
         ignoreValues: [
