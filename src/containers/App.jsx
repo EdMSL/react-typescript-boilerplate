@@ -4,7 +4,6 @@ import { Second } from '$components/Second';
 import { Third } from '$components/Third';
 import { Modal } from '$components/Modal';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
   render() {
     return (

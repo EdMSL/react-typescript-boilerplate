@@ -20,6 +20,7 @@ module.exports = {
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
     "react/jsx-fragments": [1, 'element'],
+    "react/prefer-stateless-function": 0,
   },
   globals: {
   },

@@ -36,6 +36,10 @@
 
   background-color: $bg-dark-color;
 
+  &::before {
+    text-align: center;
+  }
+
   @media (min-width: $tablet-width) {
     background-color: $bg-light-color;
   }

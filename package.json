@@ -32,7 +32,7 @@
     "test": "npm run postcss && npm run stylelint && npm run eslint"
   },
   "lint-staged": {
-    "*.scss": [
+    "src/**/*.scss": [
       "prettier --write",
       "stylelint --fix --config ./.stylelintrc-full.js",
       "git add"
