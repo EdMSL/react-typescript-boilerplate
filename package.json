@@ -30,17 +30,17 @@
     "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress",
     "test": "npm run postcss && npm run stylelint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.scss": [
       "prettier --write",
       "stylelint src/**/*.scss --fix --config ./.stylelintrc-full.js",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "devDependencies": {
     "@babel/cli": "~7.5.5",
@@ -67,7 +67,6 @@
     "cross-env": "5.2.1",
     "css-loader": "^3.2.0",
     "css-mqpacker": "7.0.0",
-    "cssnano": "^4.1.10",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-webpack": "0.11.1",
@@ -82,9 +81,11 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "normalize-scss": "*7.0.1",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
     "path": "^0.12.7",
     "postcss-cli": "6.1.3",
     "postcss-loader": "^3.0.0",
+    "postcss-safe-parser": "4.0.1",
     "postcss-scss": "2.0.0",
     "prettier": "^1.18.2",
     "sass-loader": "^8.0.0",
