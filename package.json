@@ -34,7 +34,11 @@
   "lint-staged": {
     "*.scss": [
       "prettier --write",
-      "stylelint src/**/*.scss --fix --config ./.stylelintrc-full.js",
+      "stylelint --fix --config ./.stylelintrc-full.js",
+      "git add"
+    ],
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
       "git add"
     ]
   },
