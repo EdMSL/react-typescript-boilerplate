@@ -14,8 +14,8 @@ const PATHS = {
 
 const plugins = [
   new webpack.WatchIgnorePlugin(['build']),
-  copyFavicons(`${PATHS.src}/assets/favicons`),
-  ...generateHtmlPlugins(`${PATHS.src}/assets`),
+  copyFavicons(`${PATHS.src}/public`),
+  ...generateHtmlPlugins(`${PATHS.src}/public`),
   // copyImages(`${PATHS.src}/assets/images/content`),
 ];
 

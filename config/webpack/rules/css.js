@@ -32,7 +32,7 @@ module.exports = function(mode, resourcesPath) {
           resources: `${resourcesPath}/**/*.scss`,
         },
       },
-    ].filter(Boolean)
+    ].filter(Boolean);
   }
 
   return {
@@ -57,6 +57,6 @@ module.exports = function(mode, resourcesPath) {
           }),
         }
       ],
-    }
-  }
+    },
+  };
 };

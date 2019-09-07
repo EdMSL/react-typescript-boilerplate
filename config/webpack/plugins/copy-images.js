@@ -7,4 +7,4 @@ module.exports = function(path) {
       to: 'images/content/[name].[ext]',
     },
   ]);
-}
+};

@@ -5,6 +5,8 @@ module.exports = function() {
       hot: true,
       compress: true,
       open: true,
+      clientLogLevel: 'none',
+      contentBase: 'src/public',
       watchContentBase: true,
       publicPath: '/',
       historyApiFallback: true,
@@ -13,5 +15,5 @@ module.exports = function() {
         errors: true,
       },
     },
-  }
-}
+  };
+};

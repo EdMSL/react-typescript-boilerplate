@@ -2,6 +2,5 @@
 
 module.exports = {
   parser: 'postcss-scss',
-  replace: true,
   plugins: [],
 };
