@@ -1,3 +1,4 @@
 export const FIRST_TYPES = {
+  ACTIVATE_SAGA: 'ACTIVATE_SAGA',
   ADD_TASK: 'ADD_TASK',
 };

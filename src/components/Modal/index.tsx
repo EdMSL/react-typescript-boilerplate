@@ -1,29 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
 
 const styles = require('./styles.module.scss');
 
-export class Modal extends Component {
-  constructor() {
-    super();
+interface IComponentProps {
+
+}
+
+interface IComponentState {
+  isOpen: boolean,
+}
+
+export class Modal extends Component<IComponentProps, IComponentState> {
+  constructor(props) {
+    super(props);
     this.state = {
       isOpen: false,
     };
   }
 
-  open = () => {
+  open = (): void => {
     this.setState(() => ({
       isOpen: true,
     }));
   }
 
-  close = () => {
+  close = (): void => {
     this.setState(() => ({
       isOpen: false,
     }));
   }
 
-  render() {
+  render(): ReactNode {
     const { isOpen } = this.state;
 
     return (

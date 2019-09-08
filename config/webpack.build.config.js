@@ -8,6 +8,7 @@ const OptimizeCSSAssetsPlugin = require('./webpack/plugins/optimize-css-assets-p
 // const ImageminPluginLossy = require('./webpack/plugins/imagemin-webpack-lossy');
 const css = require('./webpack/rules/css');
 const js = require('./webpack/rules/js-jsx');
+const ts = require('./webpack/rules/ts-tsx');
 // const images = require('./webpack/rules/images');
 const baseWebpackConfig = require('./webpack.base.config');
 
@@ -33,6 +34,7 @@ const buildWebpackConfig = merge([
     plugins,
   },
   js(),
+  ts(),
   css('production', `${baseWebpackConfig.externals.paths.src}/styles/resources`),
   // images(),
 ]);

@@ -1,10 +1,10 @@
 {
-  "allowSyntheticDefaultImports": true,
   "compilerOptions": {
     "outDir": "./build/",
     "sourceMap": true,
     "noImplicitAny": false,
-    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "module": "commonjs",
     "target": "es6",
     "jsx": "react",

@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const css = require('./webpack/rules/css');
 const js = require('./webpack/rules/js-jsx');
+const ts = require('./webpack/rules/ts-tsx');
 // const images = require('./webpack/rules/images');
 const devserver = require('./webpack/devserver');
 // const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
@@ -26,6 +27,7 @@ const devWebpackConfig = merge([
   },
   css('development', `${baseWebpackConfig.externals.paths.src}/styles/resources`),
   js(),
+  ts(),
   // images(),
   devserver(),
 ]);

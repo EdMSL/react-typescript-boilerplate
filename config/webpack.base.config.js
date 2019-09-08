@@ -21,7 +21,7 @@ const plugins = [
 
 const configuration = merge([
   {
-    entry: `${PATHS.src}/index.jsx`,
+    entry: `${PATHS.src}/index.tsx`,
     output: {
       path: `${PATHS.dist}`,
       filename: 'js/index.js',
