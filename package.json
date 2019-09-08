@@ -124,6 +124,8 @@
     "redux": "~4.0.4",
     "redux-persist": "~6.0.0",
     "redux-saga": "~1.0.5",
-    "reduxsauce": "~1.1.0"
+    "reduxsauce": "~1.1.0",
+    "ts-node": "~8.3.0",
+    "typescript": "~3.6.2"
   }
 }
