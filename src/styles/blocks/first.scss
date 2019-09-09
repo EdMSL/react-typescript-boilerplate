@@ -16,7 +16,12 @@
   &__field {
     display: flex;
     align-items: flex-end;
-    margin-bottom: 19px;
+    margin-bottom: 1.5em;
+
+    line-height: 0.4;
+
+    border-color: rgba(2, 88, 154, 0.7);
+    border-color: rgb(255, 255, 255);
   }
 }
 

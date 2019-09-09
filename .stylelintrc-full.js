@@ -42,21 +42,16 @@ module.exports = {
     'function-calc-no-invalid': true,
     'function-url-no-scheme-relative': true,
     'function-url-quotes': 'always',
-    'max-line-length': 80,
+    'max-line-length': 100,
     'media-feature-name-no-vendor-prefix': true,
-    'number-leading-zero': ['always', { // --fix
-      'message': 'Missing leading zero.'
-    }],
     'number-max-precision': [0, {
       'ignoreUnits': /^(?!px).*$/,
       'message': 'Value in px mast be integer number.',
     }],
-    'no-extra-semicolons': true, // --fix
     'no-unknown-animations': true,
     'property-no-vendor-prefix': [true, {
       'message': 'Not needed with autoprefixer',
     }],
-    'string-quotes': 'double', // --fix
     'time-min-milliseconds': [300, {
       'message': 'No very fast animation',
     }],

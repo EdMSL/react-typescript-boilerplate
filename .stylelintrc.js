@@ -42,6 +42,7 @@ module.exports = {
       'ignoreUnits': /^(?!px).*$/,
       'message': 'Value in px mast be integer number.',
     }],
+    'no-extra-semicolons': null,
     'no-unknown-animations': true,
     'property-no-vendor-prefix': [true, {
       'message': 'Not needed with autoprefixer',
