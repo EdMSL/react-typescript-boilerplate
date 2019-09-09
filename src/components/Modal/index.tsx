@@ -34,7 +34,7 @@ export class Modal extends Component<{}, IComponentState> {
       <React.Fragment>
         <button
           type="button"
-          onClick={this.ope}
+          onClick={this.open}
         >
           Open
         </button>

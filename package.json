@@ -24,18 +24,17 @@
     ]
   },
   "scripts": {
-    "prettier": "prettier  --write src/**/test.{ts,tsx}",
     "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
-    "stylelint": "stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
-    "eslint": "eslint src/**/*.{js,ts,jsx,tsx} --config ./.eslintrc.js --fix",
+    "stylelint": "prettier --write src/**/*.scss && stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
+    "eslint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "lint": "npm run eslint && tsc --noEmit",
+    "test": "npm run stylelint && npm run eslint",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --config=./config/webpack.dev.config.js --progress",
-    "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress",
-    "test": "npm run stylelint && npm run eslint"
+    "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress"
   },
   "lint-staged": {
     "src/**/*.scss": [
-      "prettier --write",
-      "stylelint --fix --config ./.stylelintrc-full.js",
+      "npm run stylelint",
       "git add"
     ],
     "src/**/*.{js,ts,jsx,tsx}": [
@@ -85,6 +84,7 @@
     "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "file-loader": "^4.2.0",
@@ -114,6 +114,8 @@
     "stylelint-order": "^3.1.0",
     "stylelint-scss": "^3.10.0",
     "terser-webpack-plugin": "^2.0.1",
+    "ts-node": "~8.3.0",
+    "typescript": "~3.6.2",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
@@ -131,8 +133,6 @@
     "redux": "~4.0.4",
     "redux-persist": "~6.0.0",
     "redux-saga": "~1.0.5",
-    "reduxsauce": "~1.1.0",
-    "ts-node": "~8.3.0",
-    "typescript": "~3.6.2"
+    "reduxsauce": "~1.1.0"
   }
 }

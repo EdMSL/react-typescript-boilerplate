@@ -1,0 +1,27 @@
+.main-info {
+  margin-top: 50px 50px;
+  padding: 0;
+  padding-top: 21px;
+
+  border: none;
+
+  &__field-name {
+    margin-right: 18px;
+
+    color: $grey;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__field {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 19px;
+  }
+}
+
+.root {
+  padding-top: 60px;
+
+  background-image: url("#");
+}

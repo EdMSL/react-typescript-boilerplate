@@ -4,6 +4,7 @@ module.exports = {
     ecmaFeatures: {
       "jsx": true,
     },
+    ecmaVersion: 2018,
     project: "./tsconfig.json",
     tsconfigRootDir: ".",
     warnOnUnsupportedTypeScriptVersion: false,
@@ -16,8 +17,8 @@ module.exports = {
   extends: [
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    // "prettier",
-    // "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    // "plugin:prettier/recommended",
   ],
   plugins: [
     "react",
