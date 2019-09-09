@@ -13,6 +13,7 @@ module.exports = {
     es6: true
   },
   extends: [
+    "plugin:react/recommended",
     "airbnb-base",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -24,8 +25,10 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
+    "no-unused-vars": "off", //disable standart eslint rule In favor @typescript-eslint rule
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
+    "react/jsx-uses-react": 1,
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
     "react/jsx-fragments": [1, 'element'],
     "react/prefer-stateless-function": 0,
@@ -45,6 +48,11 @@ module.exports = {
     }],
     "@typescript-eslint/no-empty-interface": 1,
     "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": [2, {
+      "vars": "all",
+      "args": "after-used",
+      "ignoreRestSiblings": false
+    }]
   },
   globals: {
   },
