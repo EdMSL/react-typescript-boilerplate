@@ -4,7 +4,7 @@ import { FIRST_TYPES } from '$modules/first/types';
 
 import { addTask } from '$modules/first/actions';
 
-function* mySaga({ payload: { task } }: ReturnType<typeof addTask>): SagaIterator {
+function* mySaga({ payload: task }: ReturnType<typeof addTask>): SagaIterator {
   yield put(addTask(task));
 }
 

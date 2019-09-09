@@ -3,17 +3,21 @@ import { createReducer } from 'reduxsauce';
 import { FIRST_TYPES } from '$modules/first/types';
 import * as FIRST_ACTIONS from '$modules/first/actions';
 
-export interface IFirstRootState {
-  tasks: number[],
-}
-
 type UnsafeReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 
 interface IActionHandler<T> {
   (state: IFirstRootState, payload: UnsafeReturnType<T>): IFirstRootState,
 }
 
-const addTask: IActionHandler<typeof FIRST_ACTIONS.addTask> = (state, { payload: { task } }) => ({
+export interface ITask {
+  task: number,
+}
+
+export interface IFirstRootState {
+  tasks: ITask[],
+}
+
+const addTask: IActionHandler<typeof FIRST_ACTIONS.addTask> = (state, { payload: task }) => ({
   ...state,
   tasks: [...state.tasks, task],
 });
