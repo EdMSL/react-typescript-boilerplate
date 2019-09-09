@@ -15,8 +15,6 @@ import { PersistConfig, Persistor } from 'redux-persist/es/types';
 import { firstReducer, IFirstRootState } from '$modules/first/reducer';
 import firstSaga from '$modules/first/sagas';
 
-type IStore = IFirstRootState;
-
 const firstPersistConfig: PersistConfig<IFirstRootState> = {
   key: 'first',
   whitelist: [],
@@ -31,6 +29,8 @@ const rootReducer = combineReducers({
   router: connectRouter(history),
 });
 
+export type IAppState = ReturnType<typeof rootReducer>
+
 export const store = createStore(
   rootReducer,
   compose(
@@ -41,7 +41,7 @@ export const store = createStore(
   ),
 );
 
-export function configureStore(): { store: Store<any>, persistor: Persistor } {
+export function configureStore(): { store: Store<IAppState>, persistor: Persistor } {
   sagaMiddleware.run(firstSaga);
 
   const persistor = persistStore(store);

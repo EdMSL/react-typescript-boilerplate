@@ -2,20 +2,22 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      "jsx": true
+      "jsx": true,
     },
     project: "./tsconfig.json",
-    tsconfigRootDir: "."
+    tsconfigRootDir: ".",
+    warnOnUnsupportedTypeScriptVersion: false,
   },
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
   },
   extends: [
-    "plugin:react/recommended",
-    "airbnb-base",
-    "plugin:@typescript-eslint/recommended"
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    // "prettier",
+    // "prettier/@typescript-eslint"
   ],
   plugins: [
     "react",
@@ -25,7 +27,7 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
-    "no-unused-vars": "off", //disable standart eslint rule In favor @typescript-eslint rule
+    // "no-unused-vars": "off", // *1 disable standart eslint rule In favor @typescript-eslint rule
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
     "react/jsx-uses-react": 1,
@@ -39,20 +41,21 @@ module.exports = {
     "@typescript-eslint/member-delimiter-style": [2, {
       "multiline": {
           "delimiter": "comma",
-          "requireLast": true
+          "requireLast": true,
       },
       "singleline": {
           "delimiter": "comma",
-          "requireLast": false
-      }
+          "requireLast": false,
+      },
     }],
     "@typescript-eslint/no-empty-interface": 1,
+    "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-var-requires": 0,
-    "@typescript-eslint/no-unused-vars": [2, {
+    "@typescript-eslint/no-unused-vars": [2, { // *1
       "vars": "all",
       "args": "after-used",
-      "ignoreRestSiblings": false
-    }]
+      "ignoreRestSiblings": false,
+    }],
   },
   globals: {
   },

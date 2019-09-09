@@ -3,15 +3,11 @@ import classNames from 'classnames';
 
 const styles = require('./styles.module.scss');
 
-interface IComponentProps {
-
-}
-
 interface IComponentState {
   isOpen: boolean,
 }
 
-export class Modal extends Component<IComponentProps, IComponentState> {
+export class Modal extends Component<{}, IComponentState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +34,7 @@ export class Modal extends Component<IComponentProps, IComponentState> {
       <React.Fragment>
         <button
           type="button"
-          onClick={this.open}
+          onClick={this.ope}
         >
           Open
         </button>

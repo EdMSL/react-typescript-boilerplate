@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = function(mode, resourcesPath) {
+module.exports = function (mode, resourcesPath) {
   function getLoaders(cssOptions) {
     return [
       {

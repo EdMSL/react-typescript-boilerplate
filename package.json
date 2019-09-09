@@ -24,9 +24,10 @@
     ]
   },
   "scripts": {
-    "postcss": "postcss src/**/*.scss --config postcss.config.js --replace",
+    "prettier": "prettier  --write src/**/test.{ts,tsx}",
+    "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
     "stylelint": "stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
-    "eslint": "eslint src/**/*.{js,ts,jsx,tsx} --fix",
+    "eslint": "eslint src/**/*.{js,ts,jsx,tsx} --config ./.eslintrc.js --fix",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --config=./config/webpack.dev.config.js --progress",
     "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress",
     "test": "npm run stylelint && npm run eslint"
@@ -68,7 +69,6 @@
     "@typescript-eslint/parser": "2.1.0",
     "autoprefixer": "*9.6.1",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-eslint": "~10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "3.2.0",
     "case-sensitive-paths-webpack-plugin": "^2.2.0",
@@ -80,6 +80,7 @@
     "css-mqpacker": "7.0.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
     "eslint-import-resolver-babel-module": "5.1.0",
     "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-import": "^2.18.2",
