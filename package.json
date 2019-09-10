@@ -38,7 +38,6 @@
       "npm run stylelint",
       "git add"
     ],
-
     "src/**/*.{js,jsx,ts,tsx}": [
       "npm run eslint",
       "git add"
@@ -51,7 +50,7 @@
   },
   "devDependencies": {
     "@babel/cli": "~7.5.5",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
