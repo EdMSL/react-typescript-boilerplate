@@ -1,7 +1,7 @@
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = function(assetsDir) {
+module.exports = function (assetsDir) {
   const templateFiles = fs.readdirSync(`${assetsDir}`);
 
   return templateFiles.map((item) => {
@@ -16,7 +16,8 @@ module.exports = function(assetsDir) {
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: `${assetsDir}/${name}.${ext}`,
-      inject: false,
+      title: 'New React App',
+      inject: process.env.NODE_ENV === 'development',
     });
   }).filter(Boolean);
 };

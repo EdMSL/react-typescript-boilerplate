@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssExtractPlugin = require('./webpack/plugins/mini-css-extract-plugin');
+const TerserPlugin = require('./webpack/plugins/terser-plugin');
 const OptimizeCSSAssetsPlugin = require('./webpack/plugins/optimize-css-assets-plugin');
 // const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
 // const ImageminWebpPlugin = require('./webpack/plugins/imagemin-webp-webpack-plugin');
@@ -28,6 +29,7 @@ const buildWebpackConfig = merge([
     optimization: {
       minimize: true,
       minimizer: [
+        TerserPlugin(),
         OptimizeCSSAssetsPlugin(),
       ],
     },
