@@ -6,15 +6,15 @@ import * as FIRST_ACTIONS from '$modules/first/actions';
 type UnsafeReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 
 interface IActionHandler<T> {
-  (state: IFirstRootState, payload: UnsafeReturnType<T>): IFirstRootState,
+  (state: IFirstRootState, payload: UnsafeReturnType<T>): IFirstRootState;
 }
 
 export interface ITask {
-  task: number,
+  task: number;
 }
 
 export interface IFirstRootState {
-  tasks: ITask[],
+  tasks: ITask[];
 }
 
 const addTask: IActionHandler<typeof FIRST_ACTIONS.addTask> = (state, { payload: task }) => ({

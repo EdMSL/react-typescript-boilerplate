@@ -10,7 +10,7 @@ import { New } from '$components/New';
 import { Modal } from '$components/Modal';
 
 interface IStateProps {
-  tasks: IAppState['first']['tasks'],
+  tasks: IAppState['first']['tasks'];
 }
 
 const mapStateToProps = ({
@@ -29,10 +29,17 @@ const UnconnectedApp: React.FunctionComponent<IAppProps> = () => (
   <ConnectedRouter history={history}>
     <div className="main-wrapper">
       <div>
-        <NavLink exact to="/" activeClassName="active">
+        <NavLink
+          exact
+          to="/"
+          activeClassName="active"
+        >
             Root
         </NavLink>
-        <NavLink to="/modal" activeClassName="active">
+        <NavLink
+          to="/modal"
+          activeClassName="active"
+        >
             Something
         </NavLink>
       </div>

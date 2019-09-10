@@ -41,7 +41,7 @@ export const store = createStore(
   ),
 );
 
-export function configureStore(): { store: Store<IAppState>, persistor: Persistor } {
+export function configureStore(): { store: Store<IAppState>; persistor: Persistor } {
   sagaMiddleware.run(firstSaga);
 
   const persistor = persistStore(store);

@@ -26,9 +26,10 @@
   "scripts": {
     "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
     "stylelint": "prettier --write src/**/*.scss && stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
-    "eslint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
-    "lint": "npm run eslint && tsc --noEmit",
-    "test": "npm run stylelint && npm run eslint",
+    "eslint": "prettier --write src/components/Test/*.tsx && eslint --config ./.eslintrc-full.js src --ext .ts,.tsx,.js,.jsx --fix",
+    "tslint": "tsc -p tsconfig.json --noEmit",
+    "lint": "npm run stylelint && npm run eslint && npm run tslint",
+    "test": "npm run lint",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --config=./config/webpack.dev.config.js --progress",
     "build": "cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress"
   },
@@ -37,14 +38,15 @@
       "npm run stylelint",
       "git add"
     ],
-    "src/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix",
+
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run eslint",
       "git add"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run tslint && lint-staged"
     }
   },
   "devDependencies": {

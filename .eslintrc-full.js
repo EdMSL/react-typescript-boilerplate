@@ -15,10 +15,10 @@ module.exports = {
     es6: true,
   },
   extends: [
-    "airbnb-base",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
+    "airbnb",
+    "prettier",
     "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
   ],
   plugins: [
     "react",
@@ -28,24 +28,21 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
-    "comma-dangle": 0,
-    "comma-spacing": 0,
-    "no-multi-spaces": 0,
-    "no-trailing-spaces": 0,
-    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
-    "prefer-const": 0,
-    "space-in-parens": 0,
-    "space-infix-ops": 0,
-    "semi-spacing": 0,
-    "semi": [1, 'always'],
+    "no-multi-spaces": ["error", {
+      ignoreEOLComments: false,
+    }],
+    "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
     "react/jsx-filename-extension": [1, {
       "extensions": [".tsx", ".jsx"],
     }],
-    "react/jsx-fragments": [1, 'element'],
+    "react/jsx-fragments": [1, "element"],
+    "react/jsx-max-props-per-line": [2, {
+      "maximum": 1,
+      "when": "always",
+    }],
     "react/prefer-stateless-function": 0,
-    "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/interface-name-prefix": [2, {
       "prefixWithI": "always",
       "allowUnderscorePrefix": false,
