@@ -4,7 +4,7 @@ import classNames from 'classnames';
 const styles = require('./styles.module.scss');
 
 interface IComponentState {
-  isOpen: boolean;
+  isOpen: boolean,
 }
 
 export class Modal extends Component<{}, IComponentState> {

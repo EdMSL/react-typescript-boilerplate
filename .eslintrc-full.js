@@ -18,7 +18,6 @@ module.exports = {
   extends: [
     "airbnb",
     "airbnb/hooks",
-    "plugin:import/errors",
     "plugin:@typescript-eslint/recommended",
     // "airbnb",
     // "airbnb/hooks",
@@ -34,11 +33,15 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
-    "no-multi-spaces": ["error", {
-      ignoreEOLComments: false,
+    "no-multiple-empty-lines": [2, { max: 1}],
+    "object-curly-newline": [2, {
+      ObjectExpression: { minProperties: 2, multiline: true, consistent: true },
+      ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
+      ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
+      ExportDeclaration: { minProperties: 3, multiline: true, consistent: true },
     }],
-    // "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
 
+    "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
 
@@ -53,11 +56,33 @@ module.exports = {
     "react/prefer-stateless-function": 0,
     "react/prop-types": 0,
 
+    "@typescript-eslint/array-type": [2, {
+      "default": "array-simple",
+      "readonly": "array-simple",
+    }],
     "@typescript-eslint/interface-name-prefix": [2, {
       "prefixWithI": "always",
       "allowUnderscorePrefix": false,
     }],
+    "@typescript-eslint/member-delimiter-style": [2, {
+      "multiline": {
+          "delimiter": "comma",
+          "requireLast": true,
+      },
+      "singleline": {
+          "delimiter": "comma",
+          "requireLast": true,
+      }
+    }],
     "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-magic-numbers": [1, {
+      ignore: [-1, 0, 1, 2],
+      ignoreArrayIndexes: true,
+      enforceConst: false,
+      detectObjects: false,
+      ignoreNumericLiteralTypes: false,
+      ignoreEnums: false,
+    }],
     "@typescript-eslint/no-var-requires": 0,
   },
   globals: {

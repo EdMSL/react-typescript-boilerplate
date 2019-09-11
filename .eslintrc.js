@@ -17,7 +17,6 @@ module.exports = {
   extends: [
     "airbnb",
     "airbnb/hooks",
-    "plugin:import/errors",
     "plugin:@typescript-eslint/recommended",
   ],
   plugins: [
@@ -28,35 +27,130 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
-    // "comma-dangle": 0,
-    // "comma-spacing": 0,
-    // "no-multi-spaces": 0,
-    // "no-trailing-spaces": 0,
-    // 'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
-    // "prefer-const": 0,
-    // "quotes": 0,
-    // "space-in-parens": 0,
-    // "space-infix-ops": 0,
-    // "semi-spacing": 0,
-    // "semi": [1, 'always'],
+    "arrow-parens": [1, "always"],
+    'arrow-spacing': [1, {
+      before: true,
+      after: true,
+    }],
+    "comma-dangle": [1, {
+      arrays: "always-multiline",
+      objects: "always-multiline",
+      imports: "always-multiline",
+      exports: "always-multiline",
+      functions: "always-multiline",
+    }],
+    "comma-spacing": [1, {
+      before: false,
+      after: true
+    }],
+    "eol-last": 0,
+    "func-call-spacing": [1, "never"],
+    "indent": [1, 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1,
+      outerIIFEBody: 1,
+      FunctionDeclaration: {
+        parameters: 1,
+        body: 1
+      },
+      FunctionExpression: {
+        parameters: 1,
+        body: 1
+      },
+      CallExpression: {
+        arguments: 1
+      },
+      ArrayExpression: 1,
+      ObjectExpression: 1,
+      ImportDeclaration: 1,
+      flatTernaryExpressions: false,
+      ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
+      ignoreComments: false
+    }],
+    "key-spacing": [1, { beforeColon: false, afterColon: true }],
+    'no-extra-parens': [1, 'all', {
+      conditionalAssign: true,
+      nestedBinaryExpressions: false,
+      returnAssign: false,
+      ignoreJSX: 'all', // delegate to eslint-plugin-react
+      enforceForArrowConditionals: false,
+    }],
+    "no-extra-semi": 1,
+    "no-magic-numbers": 0, // disabled in favor @typescript-eslint/no-magic-numbers rule
+    "no-multi-spaces": [1, {
+      ignoreEOLComments: false,
+    }],
+    "no-spaced-func": 1,
+    "no-trailing-spaces": [1, {
+      skipBlankLines: false,
+      ignoreComments: false,
+    }],
+    "object-curly-newline": [1, {
+      ObjectExpression: { minProperties: 2, multiline: true, consistent: true },
+      ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
+      ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
+      ExportDeclaration: { minProperties: 3, multiline: true, consistent: true },
+    }],
+    'object-curly-spacing': [1, 'always'],
+    "object-property-newline": [1, {
+      allowAllPropertiesOnSameLine: true,
+    }],
+    quotes: [1, "single", { avoidEscape: true }],
+    "space-in-parens": [1, "never"],
+    "space-infix-ops": 1,
+    "semi-spacing": [1, {
+      before: false,
+      after: true,
+    }],
+    "semi": [1, "always"],
+    "no-multiple-empty-lines": 0,
+
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
 
+    "react/jsx-indent": [1, 2],
     "react/jsx-filename-extension": [1, {
-      "extensions": [".tsx", ".jsx"],
+      extensions: [".tsx", ".jsx"],
     }],
-    "react/jsx-fragments": [1, 'element'],
+    "react/jsx-fragments": 0, // use React.Fragment or <>
+    // "react/jsx-max-props-per-line": [2, {
+    //   "maximum": 1,
+    //   "when": "always",
+    // }],
     "react/prefer-stateless-function": 0,
     "react/prop-types": 0,
 
+    // "@typescript-eslint/array-type": [1, {
+    //   "default": "array-simple",
+    //   "readonly": "array-simple",
+    // }],
     "@typescript-eslint/member-delimiter-style": 0,
+    // "@typescript-eslint/member-delimiter-style": [1, {
+    //   "multiline": {
+    //       "delimiter": "comma",
+    //       "requireLast": true,
+    //   },
+    //   "singleline": {
+    //       "delimiter": "comma",
+    //       "requireLast": true,
+    //   }
+    // }],
     "@typescript-eslint/interface-name-prefix": [2, {
-      "prefixWithI": "always",
-      "allowUnderscorePrefix": false,
+      prefixWithI: "always",
+      allowUnderscorePrefix: false,
     }],
-    "@typescript-eslint/no-explicit-any": 0,
+    // "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-magic-numbers": [1, {
+      ignore: [-1, 0, 1, 2],
+      ignoreArrayIndexes: true,
+      enforceConst: false,
+      detectObjects: false,
+      ignoreNumericLiteralTypes: false,
+      ignoreEnums: false,
+    }],
     "@typescript-eslint/no-var-requires": 0,
+    // "@typescript-eslint/type-annotation-spacing": 0,
   },
   globals: {
   },

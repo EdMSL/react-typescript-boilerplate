@@ -13,12 +13,13 @@
     "lib": [ "es2015", "dom", "es6" ],
     "baseUrl": ".",
     "paths": {
-      "$styles/*": [ "src/styles/*" ],
-      "$images/*": [ "src/images/*" ],
       "$components/*": [ "src/components/*" ],
       "$containers/*": [ "src/containers/*" ],
+      "$constants/*": [ "src/constants/*" ],
+      "$images/*": [ "src/images/*" ],
       "$modules/*": [ "src/modules/*" ],
       "$redux/*": [ "src/redux/*" ],
+      "$styles/*": [ "src/styles/*" ],
       "$utils/*": [ "src/utils/*" ]
     }
   },

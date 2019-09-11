@@ -35,12 +35,13 @@ const configuration = merge([
     resolve: {
       alias: {
         'react-dom': '@hot-loader/react-dom',
-        $styles: path.resolve(__dirname, `${PATHS.src}/styles/`),
-        $images: path.resolve(__dirname, `${PATHS.src}/images/`),
         $components: path.resolve(__dirname, `${PATHS.src}/components/`),
+        $constants: path.resolve(__dirname, `${PATHS.src}/constants/`),
         $containers: path.resolve(__dirname, `${PATHS.src}/containers/`),
+        $images: path.resolve(__dirname, `${PATHS.src}/images/`),
         $modules: path.resolve(__dirname, `${PATHS.src}/modules/`),
         $redux: path.resolve(__dirname, `${PATHS.src}/redux/`),
+        $styles: path.resolve(__dirname, `${PATHS.src}/styles/`),
         $utils: path.resolve(__dirname, `${PATHS.src}/utils/`),
       },
       extensions: ['.ts', '.tsx', '.js', '.jsx'],

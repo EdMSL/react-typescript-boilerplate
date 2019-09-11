@@ -10,7 +10,7 @@ import { New } from '$components/New';
 import { Modal } from '$components/Modal';
 
 interface IStateProps {
-  tasks: IAppState['first']['tasks'];
+  tasks: IAppState['first']['tasks'],
 }
 
 const mapStateToProps = ({
