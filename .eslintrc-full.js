@@ -14,11 +14,17 @@ module.exports = {
     node: true,
     es6: true,
   },
+  // TODO: delete prettier configs
   extends: [
     "airbnb",
-    "prettier",
+    "airbnb/hooks",
+    "plugin:import/errors",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
+    // "airbnb",
+    // "airbnb/hooks",
+    // "prettier",
+    // "plugin:@typescript-eslint/recommended",
+    // "prettier/@typescript-eslint",
   ],
   plugins: [
     "react",
@@ -31,9 +37,11 @@ module.exports = {
     "no-multi-spaces": ["error", {
       ignoreEOLComments: false,
     }],
-    "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
+    // "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
+
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
+
     "react/jsx-filename-extension": [1, {
       "extensions": [".tsx", ".jsx"],
     }],
@@ -44,6 +52,7 @@ module.exports = {
     }],
     "react/prefer-stateless-function": 0,
     "react/prop-types": 0,
+
     "@typescript-eslint/interface-name-prefix": [2, {
       "prefixWithI": "always",
       "allowUnderscorePrefix": false,

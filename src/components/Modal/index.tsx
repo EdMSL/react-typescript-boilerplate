@@ -19,13 +19,13 @@ export class Modal extends Component<{}, IComponentState> {
     this.setState(() => ({
       isOpen: true,
     }));
-  }
+  };
 
   close = (): void => {
     this.setState(() => ({
       isOpen: false,
     }));
-  }
+  };
 
   render(): ReactNode {
     const { isOpen } = this.state;
@@ -39,9 +39,7 @@ export class Modal extends Component<{}, IComponentState> {
           Open
         </button>
         <section className={classNames(styles.modal, !isOpen && styles['modal--closed'])}>
-          <div
-            className={styles.modal__overlay}
-          />
+          <div className={styles.modal__overlay} />
           <div className={styles.modal__body}>
             <h2 className={styles.modal__title}>Modal title</h2>
             <p className={styles.modal__text}>Modal text</p>
@@ -50,7 +48,7 @@ export class Modal extends Component<{}, IComponentState> {
               className="button button--close"
               onClick={this.close}
             >
-                Close
+              Close
             </button>
           </div>
         </section>

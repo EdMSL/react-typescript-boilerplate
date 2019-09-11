@@ -26,7 +26,7 @@
   "scripts": {
     "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
     "stylelint": "prettier --write src/**/*.scss && stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
-    "eslint": "prettier --write src/**/*.{js,jsx,ts,tsx} && eslint --config ./.eslintrc-full.js src --ext .ts,.tsx,.js,.jsx --fix",
+    "eslint": "eslint --config ./.eslintrc-full.js src/components/Test --ext .ts,.tsx,.js,.jsx --fix",
     "tslint": "tsc --project tsconfig.json",
     "lint": "npm run stylelint && npm run eslint && npm run tslint",
     "test": "npm run lint",
