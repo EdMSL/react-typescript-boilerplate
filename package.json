@@ -26,8 +26,8 @@
   "scripts": {
     "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
     "stylelint": "prettier --write src/**/*.scss && stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
-    "eslint": "prettier --write src/components/Test/*.tsx && eslint --config ./.eslintrc-full.js src --ext .ts,.tsx,.js,.jsx --fix",
-    "tslint": "tsc --project tsconfig.json --noEmit",
+    "eslint": "prettier --write src/**/*.{js,jsx,ts,tsx} && eslint --config ./.eslintrc-full.js src --ext .ts,.tsx,.js,.jsx --fix",
+    "tslint": "tsc --project tsconfig.json",
     "lint": "npm run stylelint && npm run eslint && npm run tslint",
     "test": "npm run lint",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --config=./config/webpack.dev.config.js --progress",

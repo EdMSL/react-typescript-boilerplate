@@ -43,6 +43,7 @@ module.exports = {
       "when": "always",
     }],
     "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
     "@typescript-eslint/interface-name-prefix": [2, {
       "prefixWithI": "always",
       "allowUnderscorePrefix": false,
