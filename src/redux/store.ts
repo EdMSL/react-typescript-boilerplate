@@ -46,7 +46,5 @@ export function configureStore(): { store: Store<IAppState>, persistor: Persisto
 
   const persistor = persistStore(store);
 
-  return {
-    store, persistor,
-  };
+  return { store, persistor };
 }

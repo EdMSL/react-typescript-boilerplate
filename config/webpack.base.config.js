@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 const fonts = require('./webpack/rules/fonts');
-// const copyImages = require('./webpack/plugins/copy-images');
+const images = require('./webpack/rules/images');
 const copyFavicons = require('./webpack/plugins/copy-favicons');
 const generateHtmlPlugins = require('./webpack/plugins/html-webpack-plugin');
 
@@ -16,7 +16,6 @@ const plugins = [
   new webpack.WatchIgnorePlugin(['build']),
   copyFavicons(`${PATHS.src}/public`),
   ...generateHtmlPlugins(`${PATHS.src}/public`),
-  // copyImages(`${PATHS.src}/assets/images/content`),
 ];
 
 const configuration = merge([
@@ -38,7 +37,7 @@ const configuration = merge([
         $components: path.resolve(__dirname, `${PATHS.src}/components/`),
         $constants: path.resolve(__dirname, `${PATHS.src}/constants/`),
         $containers: path.resolve(__dirname, `${PATHS.src}/containers/`),
-        $images: path.resolve(__dirname, `${PATHS.src}/images/`),
+        $images: path.resolve(__dirname, `${PATHS.src}/assets/images/`),
         $modules: path.resolve(__dirname, `${PATHS.src}/modules/`),
         $redux: path.resolve(__dirname, `${PATHS.src}/redux/`),
         $styles: path.resolve(__dirname, `${PATHS.src}/styles/`),
@@ -62,6 +61,7 @@ const configuration = merge([
     plugins,
   },
   fonts(),
+  images(),
 ]);
 
 module.exports = configuration;

@@ -1,5 +1,9 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const regExps = require('../regExps')
+
+const { cssModules } = regExps;
+
 module.exports = function (mode, resourcesPath) {
   function getLoaders(cssOptions) {
     return [
@@ -40,14 +44,14 @@ module.exports = function (mode, resourcesPath) {
       rules: [
         {
           test: /\.(scss|sass|css)$/,
-          exclude: /\.module\.(scss|sass|css)$/,
+          exclude: cssModules,
           use: getLoaders({
             sourceMap: mode === 'development',
             importLoaders: 2,
           }),
         },
         {
-          test: /\.module\.(scss|sass|css)$/,
+          test: cssModules,
           use: getLoaders({
             sourceMap: mode === 'development',
             importLoaders: 3,

@@ -16,7 +16,7 @@
       "$components/*": [ "src/components/*" ],
       "$containers/*": [ "src/containers/*" ],
       "$constants/*": [ "src/constants/*" ],
-      "$images/*": [ "src/images/*" ],
+      "$images/*": [ "src/assets/images/*" ],
       "$modules/*": [ "src/modules/*" ],
       "$redux/*": [ "src/redux/*" ],
       "$styles/*": [ "src/styles/*" ],
