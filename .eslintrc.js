@@ -73,7 +73,7 @@ module.exports = {
       conditionalAssign: true,
       nestedBinaryExpressions: false,
       returnAssign: false,
-      ignoreJSX: "all", // delegate to eslint-plugin-react
+      ignoreJSX: "all",
       enforceForArrowConditionals: false,
     }],
     "no-extra-semi": 1,
@@ -110,41 +110,33 @@ module.exports = {
     "import/newline-after-import": 0,
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
+    "import/order": [1, {
+      groups: [
+        [
+          "builtin",
+          "external",
+          "internal"
+        ],
+      ],
+      "newlines-between": "always",
+    }],
     "import/prefer-default-export": 0,
 
     "react/jsx-indent": [1, 2],
+    "react/jsx-indent-props": [1, 2],
     "react/jsx-filename-extension": [1, {
       extensions: [".tsx", ".jsx"],
     }],
     "react/jsx-fragments": 0, // use React.Fragment or <>
-    // "react/jsx-max-props-per-line": [2, {
-    //   "maximum": 1,
-    //   "when": "always",
-    // }],
     "react/jsx-tag-spacing": 1,
     "react/prefer-stateless-function": 0,
     "react/prop-types": 0,
 
-    // "@typescript-eslint/array-type": [1, {
-    //   "default": "array-simple",
-    //   "readonly": "array-simple",
-    // }],
     "@typescript-eslint/member-delimiter-style": 0,
-    // "@typescript-eslint/member-delimiter-style": [1, {
-    //   "multiline": {
-    //       "delimiter": "comma",
-    //       "requireLast": true,
-    //   },
-    //   "singleline": {
-    //       "delimiter": "comma",
-    //       "requireLast": true,
-    //   }
-    // }],
     "@typescript-eslint/interface-name-prefix": [2, {
       prefixWithI: "always",
       allowUnderscorePrefix: false,
     }],
-    // "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-magic-numbers": [1, {
       ignore: [-1, 0, 1, 2],
       ignoreArrayIndexes: true,
@@ -154,7 +146,6 @@ module.exports = {
       ignoreEnums: false,
     }],
     "@typescript-eslint/no-var-requires": 0,
-    // "@typescript-eslint/type-annotation-spacing": 0,
   },
   globals: {
   },

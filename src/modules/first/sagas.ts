@@ -1,7 +1,7 @@
 import { SagaIterator } from 'redux-saga';
 import { put, takeLatest } from 'redux-saga/effects';
-import { FIRST_TYPES } from '$modules/first/types';
 
+import { FIRST_TYPES } from '$modules/first/types';
 import { addTask } from '$modules/first/actions';
 
 function* mySaga({ payload: task }: ReturnType<typeof addTask>): SagaIterator {

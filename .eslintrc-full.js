@@ -14,16 +14,10 @@ module.exports = {
     node: true,
     es6: true,
   },
-  // TODO: delete prettier configs
   extends: [
     "airbnb",
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
-    // "airbnb",
-    // "airbnb/hooks",
-    // "prettier",
-    // "plugin:@typescript-eslint/recommended",
-    // "prettier/@typescript-eslint",
   ],
   plugins: [
     "react",
@@ -43,6 +37,16 @@ module.exports = {
 
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
+    "import/order": [1, {
+      groups: [
+        [
+          "builtin",
+          "external",
+          "internal"
+        ],
+      ],
+      "newlines-between": "always",
+    }],
     "import/prefer-default-export": 0,
 
     "react/jsx-filename-extension": [1, {

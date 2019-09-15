@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Second } from '$components/Second';
 import { Third } from '$components/Third';
-import { Icon } from '$components/Icon';
+import { Icon } from '$components/UI/Icon';
 
 const styles = require('./styles.module.scss');
 const reactLogo = require('$images/content/logo.svg');

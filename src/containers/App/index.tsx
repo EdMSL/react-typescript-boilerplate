@@ -7,7 +7,7 @@ import { NavLink, Switch, Route } from 'react-router-dom';
 import { history, IAppState } from '$redux/store';
 import * as FIRST_ACTIONS from '$modules/first/actions';
 import { New } from '$components/New';
-import { Modal } from '$components/Modal';
+import { Modal } from '$components/UI/Modal';
 
 interface IStateProps {
   tasks: IAppState['first']['tasks'],
