@@ -1,4 +1,5 @@
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+const paths = require('../paths');
 
 module.exports = function (mode, path) {
   if (mode === 'production') {
@@ -6,7 +7,7 @@ module.exports = function (mode, path) {
       `${path}/**/*.svg`,
     ], {
       output: {
-        filename: 'images/sprite.svg',
+        filename: paths.SVG_SPRITE,
         chunk: {
           keep: true,
         },
@@ -17,7 +18,7 @@ module.exports = function (mode, path) {
         },
       },
       sprite: {
-        prefix: false,
+        prefix: 'icon-',
         generate: {
           title: false,
         },
@@ -29,11 +30,11 @@ module.exports = function (mode, path) {
     `${path}/**/*.svg`,
   ], {
     output: {
-      filename: 'images/sprite.svg',
+      filename: paths.SVG_SPRITE,
       svg4everybody: false,
     },
     sprite: {
-      prefix: false,
+      prefix: 'icon-',
     },
   });
 };

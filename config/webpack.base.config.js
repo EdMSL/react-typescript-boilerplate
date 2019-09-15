@@ -9,7 +9,7 @@ const generateHtmlPlugins = require('./webpack/plugins/html-webpack-plugin');
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../build'),
-  conf: path.join(__dirname, './config'),
+  conf: path.join(__dirname, '.'),
 };
 
 const plugins = [
@@ -34,6 +34,7 @@ const configuration = merge([
     resolve: {
       alias: {
         'react-dom': '@hot-loader/react-dom',
+        $webpack: path.resolve(__dirname, `${PATHS.conf}/webpack/`),
         $components: path.resolve(__dirname, `${PATHS.src}/components/`),
         $constants: path.resolve(__dirname, `${PATHS.src}/constants/`),
         $containers: path.resolve(__dirname, `${PATHS.src}/containers/`),

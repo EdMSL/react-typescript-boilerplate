@@ -13,6 +13,7 @@
     "lib": [ "es2015", "dom", "es6" ],
     "baseUrl": ".",
     "paths": {
+      "$webpack/*": [ "config/webpack/*" ],
       "$components/*": [ "src/components/*" ],
       "$containers/*": [ "src/containers/*" ],
       "$constants/*": [ "src/constants/*" ],
