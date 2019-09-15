@@ -24,6 +24,12 @@ export const New: React.FunctionComponent = () => (
         alt="Logo React"
       />
     </picture>
+    <svg className={styles.svg}>
+      <use xlinkHref="images/sprite.svg#icon-keyboard-arrow-down" />
+    </svg>
+    <svg className={styles.svg}>
+      <use xlinkHref="images/sprite.svg#icon-keyboard-arrow-up" />
+    </svg>
     <Second />
     <Third />
   </React.Fragment>
