@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  align-items: center;
+  padding: $button-main-padding;
+
+  color: $button-main-text-color;
+
+  background-color: $button-main-bg-color;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: tint-func($button-main-bg-color, 30%);
+  }
+
+  &:active {
+    background-color: shade-func($button-main-bg-color, 10%);
+  }
+}

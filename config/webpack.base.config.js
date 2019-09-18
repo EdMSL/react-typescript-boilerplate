@@ -35,6 +35,7 @@ const configuration = merge([
       alias: {
         'react-dom': '@hot-loader/react-dom',
         $webpack: path.resolve(__dirname, `${PATHS.conf}/webpack/`),
+        $api: path.resolve(__dirname, `${PATHS.src}/api/`),
         $components: path.resolve(__dirname, `${PATHS.src}/components/`),
         $constants: path.resolve(__dirname, `${PATHS.src}/constants/`),
         $containers: path.resolve(__dirname, `${PATHS.src}/containers/`),

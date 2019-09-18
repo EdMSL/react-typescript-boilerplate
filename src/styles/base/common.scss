@@ -1,8 +1,8 @@
-:global(.box-sizing-content) {
+.box-sizing-content {
   box-sizing: content-box;
 }
 
-:global(.visually-hidden:not(:focus)),
+.visually-hidden:not(:focus),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;

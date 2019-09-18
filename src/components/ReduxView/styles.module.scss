@@ -1,0 +1,16 @@
+.view__title {
+  @include reset-indents;
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.view__img {
+  display: block;
+  width: 300px;
+  height: 300px;
+
+  animation-iteration-count: infinite;
+}

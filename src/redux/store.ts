@@ -12,11 +12,19 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import { PersistConfig, Persistor } from 'redux-persist/es/types';
 
-import { firstReducer, IFirstRootState } from '$modules/first/reducer';
-import firstSaga from '$modules/first/sagas';
+import { userReducer, IUserRootState } from '$modules/user/reducer';
+import { contentReducer, IContentRootState } from '$modules/content/reducer';
+import userSaga from '$modules/user/sagas';
+import contentSaga from '$modules/content/sagas';
 
-const firstPersistConfig: PersistConfig<IFirstRootState> = {
-  key: 'first',
+const userPersistConfig: PersistConfig<IUserRootState> = {
+  key: 'user',
+  whitelist: ['isSidebarMinimized', 'avatar'],
+  storage,
+};
+
+const contentPersistConfig: PersistConfig<IContentRootState> = {
+  key: 'content',
   whitelist: [],
   storage,
 };
@@ -25,15 +33,23 @@ export const sagaMiddleware = createSagaMiddleware();
 export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
-  first: persistReducer(firstPersistConfig, firstReducer),
+  user: persistReducer(userPersistConfig, userReducer),
+  content: persistReducer(contentPersistConfig, contentReducer),
   router: connectRouter(history),
 });
 
 export type IAppState = ReturnType<typeof rootReducer>
 
+const composeEnhancers = typeof window === 'object'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+  && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+  : compose;
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
 export const store = createStore(
   rootReducer,
-  compose(
+  composeEnhancers(
     applyMiddleware(
       routerMiddleware(history),
       sagaMiddleware,
@@ -42,7 +58,8 @@ export const store = createStore(
 );
 
 export function configureStore(): { store: Store<IAppState>, persistor: Persistor, } {
-  sagaMiddleware.run(firstSaga);
+  sagaMiddleware.run(userSaga);
+  sagaMiddleware.run(contentSaga);
 
   const persistor = persistStore(store);
 

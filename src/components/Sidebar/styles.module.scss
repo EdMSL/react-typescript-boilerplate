@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: $sidebar-desktop-width;
+  height: 100%;
+
+  background-color: $bg-white-color;
+
+  transition: width 0.3s linear;
+
+  &--minimized {
+    width: $sidebar-desktop-minimized-width;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 10px;
+  }
+}
+
+.sidebar__button {
+  justify-content: center;
+  width: $sidebar-desktop-minimized-width;
+  padding: 0;
+}
+
+.avatar__container {
+  max-width: 256px;
+  margin: 0 auto;
+
+  &--minimized {
+    width: 100%;
+  }
+}

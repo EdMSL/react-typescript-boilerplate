@@ -70,9 +70,6 @@ module.exports = {
         ],
       },
     ]],
-    'scss/at-function-named-arguments': ['always', {
-      'ignore': ['single-argument'],
-    }],
     'scss/at-function-pattern': /.+-func/,
     'scss/no-duplicate-dollar-variables': true,
     'scss/media-feature-value-dollar-variable': 'always',

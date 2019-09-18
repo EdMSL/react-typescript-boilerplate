@@ -27,6 +27,7 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
+    "max-len": [1, 100],
     "no-multiple-empty-lines": [2, { max: 1}],
     "object-curly-newline": [2, {
       ObjectExpression: { minProperties: 3, multiline: true, consistent: true },
@@ -78,7 +79,7 @@ module.exports = {
           "requireLast": true,
       }
     }],
-    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-explicit-any": 1,
     "@typescript-eslint/no-magic-numbers": [1, {
       ignore: [-1, 0, 1, 2],
       ignoreArrayIndexes: true,

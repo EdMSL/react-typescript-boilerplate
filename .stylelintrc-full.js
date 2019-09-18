@@ -84,9 +84,6 @@ module.exports = {
       },
     ]],
     'scss/dollar-variable-colon-newline-after': 'always-multi-line', // --fix
-    'scss/at-function-named-arguments': ['always', {
-      'ignore': ['single-argument'],
-    }],
     'scss/at-function-parentheses-space-before': 'never', // --fix
     'scss/at-function-pattern': /.+-func/,
     'scss/no-duplicate-dollar-variables': true,

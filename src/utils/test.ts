@@ -1,1 +1,1 @@
-export const test = (param): string => param + 1;
+export const getPathNameFromLocationPath = (path: string): string => path.slice(1);

@@ -1,6 +1,8 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
 
+import { Button } from '$components/UI/Button';
+
 const styles = require('./styles.module.scss');
 
 interface IComponentState {
@@ -32,24 +34,17 @@ export class Modal extends Component<{}, IComponentState> {
 
     return (
       <React.Fragment>
-        <button
-          type="button"
-          onClick={this.open}
-        >
-          Open
-        </button>
+        <Button onClick={this.open}>
+          ffff
+        </Button>
         <section className={classNames(styles.modal, !isOpen && styles['modal--closed'])}>
           <div className={styles.modal__overlay} />
           <div className={styles.modal__body}>
             <h2 className={styles.modal__title}>Modal title</h2>
             <p className={styles.modal__text}>Modal text</p>
-            <button
-              type="button"
-              className="button button--close"
-              onClick={this.close}
-            >
+            <Button onClick={this.close}>
               Close
-            </button>
+            </Button>
           </div>
         </section>
       </React.Fragment>

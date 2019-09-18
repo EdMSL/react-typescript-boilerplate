@@ -27,6 +27,9 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
+    "arrow-body-style": [1, "as-needed", {
+      requireReturnForObjectLiteral: false,
+    }],
     "arrow-parens": [1, "always"],
     "arrow-spacing": [1, {
       before: true,
@@ -69,13 +72,6 @@ module.exports = {
     }],
     "key-spacing": [1, { beforeColon: false, afterColon: true }],
     "max-len": [1, 100],
-    "no-extra-parens": [1, "all", {
-      conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      returnAssign: false,
-      ignoreJSX: "all",
-      enforceForArrowConditionals: false,
-    }],
     "no-extra-semi": 1,
     "no-magic-numbers": 0, // disabled in favor @typescript-eslint/no-magic-numbers rule
     "no-multi-spaces": [1, {
@@ -122,6 +118,8 @@ module.exports = {
     }],
     "import/prefer-default-export": 0,
 
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-closing-tag-location": 1,
     "react/jsx-indent": [1, 2],
     "react/jsx-indent-props": [1, 2],
     "react/jsx-filename-extension": [1, {
