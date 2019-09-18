@@ -11,14 +11,14 @@ const styles = require('./styles.module.scss');
 
 interface IProps {
   isSidebarMinimized: IUserRootState['isSidebarMinimized'],
-  avatar: IUserRootState['avatar'],
+  userAvatar: IUserRootState['userAvatar'],
   minimizeSidebar: typeof USER_ACTIONS.minimizeSidebar,
 }
 
 export const Sidebar: React.FunctionComponent<IProps> = ({
   isSidebarMinimized,
   minimizeSidebar,
-  avatar,
+  userAvatar,
 }) => {
   const onMinimizeSidebarBtnClick = React.useCallback(() => {
     minimizeSidebar(!isSidebarMinimized);
@@ -44,10 +44,10 @@ export const Sidebar: React.FunctionComponent<IProps> = ({
         )}
       >
         {
-          avatar !== ''
+          userAvatar !== ''
             ? (
               <img
-                src={avatar}
+                src={userAvatar}
                 alt="Avatar"
               />
             )

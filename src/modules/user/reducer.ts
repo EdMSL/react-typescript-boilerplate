@@ -11,7 +11,7 @@ export interface IRequestError {
 
 export type IUserRootState = Readonly<{
   isSidebarMinimized: boolean,
-  avatar: string,
+  userAvatar: string,
   requestError: IRequestError,
 }>;
 
@@ -25,13 +25,13 @@ interface IActionHandler<T> {
 
 const INITIAL_STATE: IUserRootState = {
   isSidebarMinimized: false,
-  avatar: '',
+  userAvatar: '',
   requestError: DEFAULT_REQUEST_ERROR,
 };
 
 const minimizeSidebar: IActionHandler<typeof USER_ACTIONS.minimizeSidebar> = (
   state,
-  { isSidebarMinimized },
+  { payload: isSidebarMinimized },
 ) => ({
   ...state,
   isSidebarMinimized,
@@ -39,15 +39,15 @@ const minimizeSidebar: IActionHandler<typeof USER_ACTIONS.minimizeSidebar> = (
 
 const getUserAvatar: IActionHandler<typeof USER_ACTIONS.getUserAvatar> = (
   state,
-  { avatar },
+  { payload: userAvatar },
 ) => ({
   ...state,
-  avatar,
+  userAvatar,
 });
 
 const setRequestError: IActionHandler<typeof USER_ACTIONS.setRequestError> = (
   state,
-  { requestError },
+  { payload: requestError },
 ) => ({
   ...state,
   requestError,

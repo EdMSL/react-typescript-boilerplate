@@ -1,36 +1,28 @@
 import { USER_TYPES } from '$modules/user/types';
 import { IUserRootState } from '$modules/user/reducer';
 
-interface IMinimizeSidebar {
-  type: typeof USER_TYPES.MINIMIZE_SIDEBAR,
-  isSidebarMinimized: IUserRootState['isSidebarMinimized'],
-}
-
-interface IGetUserAvatar {
-  type: typeof USER_TYPES.GET_USER_AVATAR,
-  avatar: IUserRootState['avatar'],
-}
-
-interface ISetRequestError {
-  type: typeof USER_TYPES.SET_REQUEST_ERROR,
-  requestError: IUserRootState['requestError'],
+interface IActionReturnType<T> {
+  type: string,
+  payload: T,
 }
 
 export const minimizeSidebar = (
   isSidebarMinimized: IUserRootState['isSidebarMinimized'],
-): IMinimizeSidebar => ({
+): IActionReturnType<typeof isSidebarMinimized> => ({
   type: USER_TYPES.MINIMIZE_SIDEBAR,
-  isSidebarMinimized,
+  payload: isSidebarMinimized,
 });
 
-export const getUserAvatar = (avatar: IUserRootState['avatar']): IGetUserAvatar => ({
+export const getUserAvatar = (
+  userAvatar: IUserRootState['userAvatar'],
+): IActionReturnType<typeof userAvatar> => ({
   type: USER_TYPES.GET_USER_AVATAR,
-  avatar,
+  payload: userAvatar,
 });
 
 export const setRequestError = (
   requestError: IUserRootState['requestError'],
-): ISetRequestError => ({
+): IActionReturnType<typeof requestError> => ({
   type: USER_TYPES.SET_REQUEST_ERROR,
-  requestError,
+  payload: requestError,
 });

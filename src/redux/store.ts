@@ -19,7 +19,7 @@ import contentSaga from '$modules/content/sagas';
 
 const userPersistConfig: PersistConfig<IUserRootState> = {
   key: 'user',
-  whitelist: ['isSidebarMinimized', 'avatar'],
+  whitelist: ['isSidebarMinimized', 'userAvatar'],
   storage,
 };
 

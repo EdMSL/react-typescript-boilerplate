@@ -12,9 +12,9 @@ import { getUserAvatar, setRequestError } from '$modules/user/actions';
 import { DEFAULT_REQUEST_ERROR } from '$constants/defaultParameters';
 
 function* getUserSaga(): SagaIterator {
-  const { user: { avatar } } = yield select((state) => state);
+  const { user: { userAvatar } } = yield select((state) => state);
 
-  if (!avatar) {
+  if (!userAvatar) {
     const userData = yield call(apiGetUser);
 
     if (userData && userData.avatar_url) {

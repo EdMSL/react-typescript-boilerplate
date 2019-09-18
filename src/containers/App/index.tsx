@@ -22,16 +22,16 @@ const styles = require('./styles.module.scss');
 interface IStateProps {
   view: IAppState['content']['view'],
   isSidebarMinimized: IAppState['user']['isSidebarMinimized'],
-  avatar: IAppState['user']['avatar'],
+  userAvatar: IAppState['user']['userAvatar'],
 }
 
 const mapStateToProps = ({
   content: { view },
-  user: { isSidebarMinimized, avatar },
+  user: { isSidebarMinimized, userAvatar },
 }: IAppState): IStateProps => ({
   view,
   isSidebarMinimized,
-  avatar,
+  userAvatar,
 });
 
 const mapDispatchToProps = {
@@ -44,14 +44,14 @@ const UnconnectedApp: React.FunctionComponent<IAppProps> = ({
   view,
   isSidebarMinimized,
   minimizeSidebar,
-  avatar,
+  userAvatar,
 }) => (
   <ConnectedRouter history={history}>
     <div className={classNames('main-wrapper', styles[view])}>
       <Sidebar
         isSidebarMinimized={isSidebarMinimized}
         minimizeSidebar={minimizeSidebar}
-        avatar={avatar}
+        userAvatar={userAvatar}
       />
       <div className={classNames(styles.router, isSidebarMinimized && styles['router--full'])}>
         <NavLink
