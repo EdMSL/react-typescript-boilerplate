@@ -1,46 +1,44 @@
+import { AxiosPromise, AxiosResponse } from 'axios';
+
 import { client } from '$api/config';
 import { ApiGithubRequestUrl, ApiErrorStatusCode } from '$api/constants';
+import { IRequestError } from '$modules/user/reducer';
 
-interface IErrorResponse {
-  errorStatus: number,
-  errorText: string,
-}
+const parseResult = (result: AxiosResponse): AxiosResponse['data'] => result && result.data;
 
-const parseResult = (result) => result && result.data;
-
-const onError = ({ response }): IErrorResponse => {
+const onError = ({ response }): IRequestError => {
   switch (response.status) {
     case ApiErrorStatusCode.BAD_REQUEST:
       return {
-        errorStatus: response.status,
-        errorText: 'Entered data is incorrect or this login allready exist. Please, check fields data.', // eslint-disable-line max-len
+        status: response.status,
+        text: 'Incorrect request data',
       };
     case ApiErrorStatusCode.UNAUTHORIZEDS:
       return {
-        errorStatus: response.status,
-        errorText: 'Authorisation error.',
+        status: response.status,
+        text: 'Authorisation error',
       };
     case ApiErrorStatusCode.NOT_FOUND:
       return {
-        errorStatus: response.status,
-        errorText: 'User not found!',
+        status: response.status,
+        text: 'User not found',
       };
     case response.status >= ApiErrorStatusCode.INTERNAL_STATUS_ERROR:
       return {
-        errorStatus: response.status,
-        errorText: 'It seems something went wrong. Please, try later.',
+        status: response.status,
+        text: 'It seems something went wrong. Please, try later.',
       };
     default:
       return {
-        errorStatus: response.status,
-        errorText: response.statusText,
+        status: response.status,
+        text: response.statusText,
       };
   }
 };
 
-export const apiGetUser = (props = {}) => (
+export const apiGetUser = (data = {}): AxiosPromise => (
   client({
-    ...props,
+    data,
     method: 'GET',
     url: `${ApiGithubRequestUrl.GET_USER}EdMSL`,
   })

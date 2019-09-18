@@ -16,7 +16,10 @@
   }
 
   @media (max-width: $tablet-width) {
+    position: static;
+
     width: 100%;
+    height: auto;
     margin: 0 auto;
   }
 
@@ -29,6 +32,10 @@
   justify-content: center;
   width: $sidebar-desktop-minimized-width;
   padding: 0;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .avatar__container {

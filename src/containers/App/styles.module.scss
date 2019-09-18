@@ -18,6 +18,10 @@
   &--full {
     padding-left: $sidebar-desktop-minimized-width;
   }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .router__button {
@@ -81,5 +85,13 @@
 
   &--full {
     padding-left: $sidebar-desktop-minimized-width;
+
+    @media (max-width: $tablet-width) {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
   }
 }

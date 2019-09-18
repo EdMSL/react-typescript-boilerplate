@@ -8,7 +8,8 @@ import {
 } from 'redux-saga/effects';
 
 import { apiGetUser } from '$api/user';
-import { getUserAvatar } from '$modules/user/actions';
+import { getUserAvatar, setRequestError } from '$modules/user/actions';
+import { DEFAULT_REQUEST_ERROR } from '$constants/defaultParameters';
 
 function* getUserSaga(): SagaIterator {
   const { user: { avatar } } = yield select((state) => state);
@@ -16,7 +17,12 @@ function* getUserSaga(): SagaIterator {
   if (!avatar) {
     const userData = yield call(apiGetUser);
 
-    yield put(getUserAvatar(userData.avatar_url));
+    if (userData && userData.avatar_url) {
+      yield put(getUserAvatar(userData.avatar_url));
+      yield put(setRequestError(DEFAULT_REQUEST_ERROR));
+    } else {
+      yield put(setRequestError(userData));
+    }
   }
 }
 
