@@ -5,6 +5,13 @@
     "typescript",
     "typescriptreact"
   ],
+  "eslint.options": {
+    "parserOptions": {
+      "project": [
+        "${workspaceFolder}/tsconfig.json"
+      ],
+    }
+  },
   "path-intellisense.autoSlashAfterDirectory": false,
   "path-intellisense.mappings": {
       "~$images": "${workspaceRoot}/src/assets/images",
