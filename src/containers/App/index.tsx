@@ -47,48 +47,50 @@ const UnconnectedApp: React.FunctionComponent<IAppProps> = ({
   userAvatar,
 }) => (
   <ConnectedRouter history={history}>
-    <div className={classNames('main-wrapper', styles[view])}>
-      <Sidebar
-        isSidebarMinimized={isSidebarMinimized}
-        minimizeSidebar={minimizeSidebar}
-        userAvatar={userAvatar}
-      />
-      <div className={classNames(styles.router, isSidebarMinimized && styles['router--full'])}>
-        <NavLink
-          exact
-          to={PathName.REACT_VIEW}
-          className={classNames(styles.router__button, styles['router__button--react'])}
-          activeClassName={styles['router__button--react--active']}
-        >
-          React
-        </NavLink>
-        <NavLink
-          exact
-          to={PathName.REDUX_VIEW}
-          className={classNames(styles.router__button, styles['router__button--redux'])}
-          activeClassName={styles['router__button--redux--active']}
-        >
-          Redux
-        </NavLink>
-      </div>
-      <section className={classNames(styles.view, isSidebarMinimized && styles['view--full'])}>
-        <Switch>
-          <Route
+    <main>
+      <div className={classNames('main-wrapper', styles[view])}>
+        <Sidebar
+          isSidebarMinimized={isSidebarMinimized}
+          minimizeSidebar={minimizeSidebar}
+          userAvatar={userAvatar}
+        />
+        <section className={classNames(styles.router, isSidebarMinimized && styles['router--full'])}>
+          <NavLink
             exact
-            path={PathName.REACT_VIEW}
-            component={ReactView}
-          />
-          <Route
-            path={PathName.REDUX_VIEW}
-            component={ReduxView}
-          />
-          <Redirect
-            from="/*"
             to={PathName.REACT_VIEW}
-          />
-        </Switch>
-      </section>
-    </div>
+            className={classNames(styles.router__button, styles['router__button--react'])}
+            activeClassName={styles['router__button--react--active']}
+          >
+            React
+          </NavLink>
+          <NavLink
+            exact
+            to={PathName.REDUX_VIEW}
+            className={classNames(styles.router__button, styles['router__button--redux'])}
+            activeClassName={styles['router__button--redux--active']}
+          >
+            Redux
+          </NavLink>
+        </section>
+        <section className={classNames(styles.view, isSidebarMinimized && styles['view--full'])}>
+          <Switch>
+            <Route
+              exact
+              path={PathName.REACT_VIEW}
+              component={ReactView}
+            />
+            <Route
+              path={PathName.REDUX_VIEW}
+              component={ReduxView}
+            />
+            <Redirect
+              from="/*"
+              to={PathName.REACT_VIEW}
+            />
+          </Switch>
+        </section>
+      </div>
+    </main>
   </ConnectedRouter>
 );
 

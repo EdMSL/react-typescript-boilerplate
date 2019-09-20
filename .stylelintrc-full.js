@@ -102,7 +102,11 @@ module.exports = {
         },
         {
           type: 'rule',
-          selector: '^&:\\w'
+          selector: '^&:(first-child|last-child)'
+        },
+        {
+          type: 'rule',
+          selector: '^&:'
         },
         {
           type: 'rule',
