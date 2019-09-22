@@ -93,6 +93,13 @@ module.exports = {
     "object-property-newline": [1, {
       allowAllPropertiesOnSameLine: true,
     }],
+    "padded-blocks": [1, {
+      blocks: "never",
+      classes: "never",
+      switches: "never",
+    }, {
+      allowSingleLineBlocks: true,
+    }],
     quotes: [1, "single", { avoidEscape: true }],
     "semi-spacing": [1, {
       before: false,
