@@ -18,7 +18,7 @@ export const Icon: React.FunctionComponent<IProps> = memo(({
   height = width,
 }) => (
   <svg
-    className={className}
+    className={icon === 'unknown' ? 'hide' : className}
     width={width}
     height={height}
   >
