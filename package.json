@@ -9,7 +9,11 @@
     "url": "https://github.com/EdMSL/react-typescript-boilerplate"
   },
   "license": "MIT",
-  "keywords": ["react", "redux", "typescript"],
+  "keywords": [
+    "react",
+    "redux",
+    "typescript"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -132,6 +136,7 @@
     "@hot-loader/react-dom": "~16.9.0",
     "axios": "~0.19.0",
     "connected-react-router": "~6.5.2",
+    "express": "~4.17.1",
     "history": "~4.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
