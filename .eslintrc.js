@@ -136,6 +136,7 @@ module.exports = {
     "react/jsx-tag-spacing": 1,
     "react/prefer-stateless-function": 0,
     "react/prop-types": 0,
+    "react/self-closing-comp": 1,
 
     "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/interface-name-prefix": [2, {

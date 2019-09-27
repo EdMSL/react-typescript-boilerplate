@@ -1,7 +1,6 @@
 module.exports = {
   printWidth: 100,
   semi: true,
-  endOfLine: 'lf',
   singleQuote: true,
   arrowParens: 'always',
   jsxSingleQuote: false,
@@ -13,6 +12,7 @@ module.exports = {
       files: '*.{css,sass,scss}',
       options: {
         singleQuote: false,
+        printWidth: 80,
       }
     },
   ],

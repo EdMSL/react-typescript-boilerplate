@@ -34,7 +34,7 @@ export const Sidebar: React.FunctionComponent<IProps> = ({
       >
         <Icon
           icon={isSidebarMinimized ? 'keyboard-arrow-right' : 'keyboard-arrow-left'}
-          width={44}
+          size={44}
         />
       </Button>
       <div
