@@ -29,7 +29,7 @@
   },
   "scripts": {
     "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
-    "stylelint": "prettier --write src/**/*.scss && stylelint src/**/*.scss --config ./.stylelintrc-full.js --fix",
+    "stylelint": "prettier --write src/**/*.scss && stylelint src/**/*.scss --config ./.stylelintrc-full.js --syntax scss --fix",
     "eslint": "eslint --config ./.eslintrc-full.js src --ext .ts,.tsx,.js,.jsx --fix",
     "tslint": "tsc --project tsconfig.json",
     "lint": "npm run stylelint && npm run eslint && npm run tslint",
