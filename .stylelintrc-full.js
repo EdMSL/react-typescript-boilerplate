@@ -64,8 +64,8 @@ module.exports = {
     }],
     'selector-max-compound-selectors': 2,
     'selector-max-universal': 1,
-    "selector-pseudo-class-no-unknown": [true, {
-      ignorePseudoClasses: ["global"],
+    'selector-pseudo-class-no-unknown': [true, {
+      ignorePseudoClasses: ['global'],
     }],
     'value-keyword-case': 'lower', // --fix
     'aditayvm/at-rule-no-children': true,
@@ -123,13 +123,13 @@ module.exports = {
         },
       ],
       {
-        unspecified: "bottom",
+        unspecified: 'bottom',
       },
     ],
     'order/properties-order': [ // --fix all
       {
-        groupName: "positioning",
-        emptyLineBefore: "always",
+        groupName: 'positioning',
+        emptyLineBefore: 'always',
         properties: [
           'content',
           'position',
@@ -141,8 +141,8 @@ module.exports = {
         ],
       },
       {
-        groupName: "block model",
-        emptyLineBefore: "always",
+        groupName: 'block model',
+        emptyLineBefore: 'always',
         properties: [
           'flex',
           'flex-grow',
@@ -180,8 +180,8 @@ module.exports = {
         ],
       },
       {
-        groupName: "typography",
-        emptyLineBefore: "always",
+        groupName: 'typography',
+        emptyLineBefore: 'always',
         properties: [
           'font',
           'font-family',
@@ -250,8 +250,8 @@ module.exports = {
         ],
       },
       {
-        groupName: "formalization",
-        emptyLineBefore: "always",
+        groupName: 'formalization',
+        emptyLineBefore: 'always',
         properties: [
           'background',
           'background-color',
@@ -317,8 +317,8 @@ module.exports = {
         ],
       },
       {
-        groupName: "animation",
-        emptyLineBefore: "always",
+        groupName: 'animation',
+        emptyLineBefore: 'always',
         properties: [
           'transition',
           'transition-delay',
@@ -336,8 +336,8 @@ module.exports = {
         ],
       },
       {
-        groupName: "other",
-        emptyLineBefore: "always",
+        groupName: 'other',
+        emptyLineBefore: 'always',
         properties: [
           'quotes',
           'counter-reset',

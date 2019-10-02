@@ -13,6 +13,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    mocha: true,
   },
   extends: [
     "airbnb",
@@ -35,6 +36,7 @@ module.exports = {
       ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
       ExportDeclaration: { minProperties: 3, multiline: true, consistent: true },
     }],
+    "space-before-function-paren": [1, "never"],
 
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,

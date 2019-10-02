@@ -54,7 +54,12 @@ const UnconnectedApp: React.FunctionComponent<IAppProps> = ({
           minimizeSidebar={minimizeSidebar}
           userAvatar={userAvatar}
         />
-        <section className={classNames(styles.router, isSidebarMinimized && styles['router--full'])}>
+        <section
+          className={classNames(
+            styles.router,
+            isSidebarMinimized && styles['router--full'],
+          )}
+        >
           <NavLink
             exact
             to={PathName.REACT_VIEW}

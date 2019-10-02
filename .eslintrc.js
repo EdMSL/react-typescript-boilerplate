@@ -13,6 +13,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    mocha: true,
   },
   extends: [
     "airbnb",
@@ -106,6 +107,7 @@ module.exports = {
       after: true,
     }],
     "semi": [1, "always"],
+    "space-before-function-paren": [1, "never"],
     "space-in-parens": [1, "never"],
     "space-infix-ops": 1,
     "spaced-comment": 0,
