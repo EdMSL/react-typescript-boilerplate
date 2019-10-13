@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const regExps = require('../regExps')
+const regExps = require('../regExps');
 
 const { cssModules } = regExps;
 
