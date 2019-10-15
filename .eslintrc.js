@@ -71,7 +71,8 @@ module.exports = {
       ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
       ignoreComments: false
     }],
-    "key-spacing": [1, { beforeColon: false, afterColon: true }],    "linebreak-style": 0,
+    "key-spacing": [1, { beforeColon: false, afterColon: true }],
+    "linebreak-style": 0,
     "max-len": [1, 100],
     "no-extra-semi": 1,
     "no-magic-numbers": 0, // disabled in favor @typescript-eslint/no-magic-numbers rule
