@@ -79,6 +79,7 @@ module.exports = {
       ignoreEOLComments: false,
     }],
     "no-multiple-empty-lines": 0,
+    "no-plusplus": 1,
     "no-spaced-func": 1,
     "no-trailing-spaces": [1, {
       skipBlankLines: false,

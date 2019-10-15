@@ -30,6 +30,7 @@ module.exports = {
   rules: {
     "max-len": [1, 100],
     "no-multiple-empty-lines": [2, { max: 1}],
+    "no-plusplus": 1,
     "object-curly-newline": [2, {
       ObjectExpression: { minProperties: 3, multiline: true, consistent: true },
       ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
