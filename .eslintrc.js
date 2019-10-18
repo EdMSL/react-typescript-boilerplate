@@ -82,10 +82,7 @@ module.exports = {
     "no-multiple-empty-lines": 0,
     "no-plusplus": 1,
     "no-spaced-func": 1,
-    "no-trailing-spaces": [1, {
-      skipBlankLines: false,
-      ignoreComments: false,
-    }],
+    "no-trailing-spaces": 0,
     "object-curly-newline": [1, {
       ObjectExpression: { minProperties: 3, multiline: true, consistent: true },
       ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
