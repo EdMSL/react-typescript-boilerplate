@@ -27,6 +27,16 @@ module.exports = {
     "react-hooks",
     "@typescript-eslint",
   ],
+  settings: {
+    "import/resolver": {
+      webpack: {
+        config: "./config/webpack.base.config.js",
+      }
+    },
+    react: {
+      version: "detect",
+    },
+  },
   rules: {
     "arrow-body-style": [1, "as-needed", {
       requireReturnForObjectLiteral: false,
@@ -153,17 +163,5 @@ module.exports = {
       ignoreEnums: false,
     }],
     "@typescript-eslint/no-var-requires": 0,
-  },
-  globals: {
-  },
-  settings: {
-    "import/resolver": {
-      webpack: {
-        config: "./config/webpack.base.config.js",
-      }
-    },
-    react: {
-      version: "detect",
-    },
   },
 }
