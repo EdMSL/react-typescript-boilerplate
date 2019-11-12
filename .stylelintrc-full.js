@@ -78,7 +78,7 @@ module.exports = {
       {
         ignoreValues: [
           "transparent",
-          "transparentize",
+          "/transparentize/",
           "inherit",
           "/-func/",
         ],
@@ -92,11 +92,13 @@ module.exports = {
     "scss/operator-no-unspaced": true,
     "order/order": [
       [  // --fix all
+        "custom-properties",
+        "dollar-variables",
+        "declarations",
         {
           type: "at-rule",
           name: "include"
         },
-        "declarations",
         {
           type: "rule",
           selector: "^&::(before|after)"

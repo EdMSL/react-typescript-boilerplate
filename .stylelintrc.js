@@ -65,7 +65,7 @@ module.exports = {
       {
         ignoreValues: [
           "transparent",
-          "transparentize",
+          "/transparentize/",
           "inherit",
           "/-func/",
         ],
