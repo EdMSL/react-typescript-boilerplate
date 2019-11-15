@@ -94,11 +94,11 @@ module.exports = {
       [  // --fix all
         "custom-properties",
         "dollar-variables",
-        "declarations",
         {
           type: "at-rule",
           name: "include"
         },
+        "declarations",
         {
           type: "rule",
           selector: "^&::(before|after)"
@@ -352,6 +352,7 @@ module.exports = {
           "nav-down",
           "nav-left",
           "pointer-events",
+          "object-fit",
           "will-change",
           "clip",
           "clip-path",

@@ -5,14 +5,16 @@ const styles = require('./styles.module.scss');
 
 interface IButtonProps {
   children: string | ReactElement | [string | ReactElement, string | ReactElement],
+  className?: string,
+  id?: string,
   isSubmit?: boolean,
   isDisabled?: boolean,
   onClick?: (e: React.SyntheticEvent) => void,
-  className?: string,
 }
 export const Button: React.FunctionComponent<IButtonProps> = memo(({
   children,
   className = '',
+  id,
   isSubmit,
   isDisabled,
   onClick,
@@ -22,6 +24,7 @@ export const Button: React.FunctionComponent<IButtonProps> = memo(({
     type={isSubmit ? 'submit' : 'button'}
     className={classNames(styles.button, className)}
     disabled={isDisabled}
+    id={id}
     onClick={isSubmit ? null : onClick}
   >
     {
