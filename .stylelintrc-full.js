@@ -8,7 +8,6 @@ module.exports = {
     "stylelint-order",
     "stylelint-at-rule-no-children",
     "stylelint-declaration-use-variable",
-    "stylelint-color-format",
   ],
   ignoreFiles: [
     "build/**/*"
@@ -25,9 +24,6 @@ module.exports = {
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": [true, {
       "message": "No empty rule blocks.",
-    }],
-    "color-named": ["never", {
-      "message": "No named (web) colors.",
     }],
     "comment-no-empty": [true, {
       "message": "No empty comment",
@@ -69,9 +65,6 @@ module.exports = {
     }],
     "value-keyword-case": "lower", // --fix
     "aditayvm/at-rule-no-children": true,
-    "color-format/format": { // --fix
-      "format": "rgb",
-    },
     "sh-waqar/declaration-use-variable": [[
       "color",
       "background-color",
