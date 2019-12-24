@@ -4,7 +4,6 @@ module.exports = {
   ],
   plugins: [
     "stylelint-scss",
-    "stylelint-order",
     "stylelint-at-rule-no-children",
     "stylelint-declaration-use-variable",
   ],

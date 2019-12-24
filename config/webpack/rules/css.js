@@ -27,6 +27,9 @@ module.exports = function (mode, resourcesPath) {
         loader: 'sass-loader',
         options: {
           sourceMap: mode === 'development',
+          sassOptions: {
+            outputStyle: 'expanded',
+          },
         },
       },
       {
