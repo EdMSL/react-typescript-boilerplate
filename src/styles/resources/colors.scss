@@ -1,23 +1,23 @@
 @import "./functions.scss";
 
-$text-main-color: rgb(50, 50, 50);
-$text-secondary-color: rgb(109, 109, 109);
+$light-black: rgb(50, 50, 50);
+$dark-black: rgb(18, 18, 18);
+$white: rgb(255, 255, 255);
+$gray: rgb(109, 109, 109);
+
+$theme-primary-color: rgb(64, 196, 255);
+$theme-secondary-color: rgb(2, 88, 154);
+
+$text-primary-color: $light-black;
+$text-secondary-color: $gray;
 
 $link-main-color: rgb(69, 1, 255);
 
-$bg-white-color: rgb(255, 255, 255);
-$bg-light-color: rgb(231, 231, 231);
-$bg-dark-color: rgb(18, 16, 14);
+$bg-white-color: $white;
+$bg-light-color: darken($white, 10%);
+$bg-dark-color: $dark-black;
 
-$overlay-color: rgba(50, 50, 50, 0.3);
-
-$primary-color: rgb(64, 196, 255);
-$secondary-color: rgb(2, 88, 154);
-
-$button-main-bg-color: $primary-color;
+$button-main-bg-color: $theme-primary-color;
 $button-secondary-bg-color: rgb(55, 220, 55);
 $button-main-text-color: rgb(255, 255, 255);
 $button-secondary-text-color: rgb(35, 36, 35);
-
-$react-main-color: rgb(83, 193, 222);
-$redux-main-color: rgb(118, 74, 188);

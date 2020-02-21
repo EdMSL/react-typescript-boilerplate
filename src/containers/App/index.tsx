@@ -1,6 +1,6 @@
+import { hot } from 'react-hot-loader';
 import React from 'react';
 import { connect } from 'react-redux';
-import { hot } from 'react-hot-loader';
 import { ConnectedRouter } from 'connected-react-router';
 import {
   NavLink,
