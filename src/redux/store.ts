@@ -7,10 +7,10 @@ import {
 } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { PersistConfig, Persistor } from 'redux-persist/es/types';
 import createSagaMiddleware from 'redux-saga';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
-import { PersistConfig, Persistor } from 'redux-persist/es/types';
 
 import { userReducer, IUserRootState } from '$modules/user/reducer';
 import { contentReducer, IContentRootState } from '$modules/content/reducer';
@@ -29,7 +29,7 @@ const contentPersistConfig: PersistConfig<IContentRootState> = {
   storage,
 };
 
-export const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({

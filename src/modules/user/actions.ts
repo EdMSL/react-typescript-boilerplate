@@ -3,7 +3,7 @@ import { IUserRootState } from '$modules/user/reducer';
 
 interface IActionReturnType<T> {
   type: string,
-  payload: T,
+  payload?: T,
 }
 
 export const minimizeSidebar = (

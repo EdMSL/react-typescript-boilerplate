@@ -3,7 +3,7 @@ import { IContentRootState } from '$modules/content/reducer';
 
 interface IActionReturnType<T> {
   type: string,
-  payload: T,
+  payload?: T,
 }
 
 export const changeView = (view: IContentRootState['view']): IActionReturnType<typeof view> => ({
