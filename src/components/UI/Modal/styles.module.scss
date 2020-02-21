@@ -38,6 +38,8 @@
   background-color: $bg-dark-color;
 
   &::before {
+    content: "";
+
     text-align: center;
   }
 
