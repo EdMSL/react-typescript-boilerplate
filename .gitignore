@@ -16,3 +16,6 @@ dist/
 
 # Папка с доп. файлами для проекта
 data/
+
+# Файл lock
+package-lock.json
