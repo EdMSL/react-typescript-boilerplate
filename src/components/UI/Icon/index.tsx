@@ -12,7 +12,7 @@ const DEFAULT_SVG_SIZE = 24;
 
 export const Icon: React.FunctionComponent<IProps> = memo(({
   icon,
-  className = '',
+  className = null,
   size = DEFAULT_SVG_SIZE,
 }) => (
   <svg

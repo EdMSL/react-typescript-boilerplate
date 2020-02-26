@@ -1,9 +1,8 @@
-@import "./functions.scss";
-
 $light-black: rgb(50, 50, 50);
 $dark-black: rgb(18, 18, 18);
 $white: rgb(255, 255, 255);
 $gray: rgb(109, 109, 109);
+$light-gray: rgb(150, 150, 150);
 
 $theme-primary-color: rgb(64, 196, 255);
 $theme-secondary-color: rgb(2, 88, 154);
@@ -11,7 +10,7 @@ $theme-secondary-color: rgb(2, 88, 154);
 $text-primary-color: $light-black;
 $text-secondary-color: $gray;
 
-$link-main-color: rgb(69, 1, 255);
+$link-main-color: $text-primary-color;
 
 $bg-white-color: $white;
 $bg-light-color: darken($white, 10%);
@@ -19,5 +18,10 @@ $bg-dark-color: $dark-black;
 
 $button-main-bg-color: $theme-primary-color;
 $button-secondary-bg-color: rgb(55, 220, 55);
-$button-main-text-color: rgb(255, 255, 255);
+$button-disabled-bg-color: $light-gray;
+$button-main-text-color: $white;
 $button-secondary-text-color: rgb(35, 36, 35);
+$button-disabled-text-color: $white;
+
+$react-main-color: rgb(11, 218, 255);
+$redux-main-color: rgb(157, 11, 255);

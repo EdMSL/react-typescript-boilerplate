@@ -1,20 +1,46 @@
 .button {
-  display: flex;
+  align-self: center;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
+  min-width: 100px;
   padding: $button-main-padding;
 
+  font-family: inherit;
   color: $button-main-text-color;
+  font-size: 1rem;
+  line-height: 1rem;
 
   background-color: $button-main-bg-color;
   border: none;
-  outline: none;
 
-  &:hover,
+  appearance: none;
+  cursor: pointer;
+
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background-color: shade-func($button-main-bg-color, 30%);
+  }
+
   &:focus {
-    background-color: tint-func($button-main-bg-color, 30%);
+    outline: none;
+    box-shadow: 0 0 0 2px tint-func($button-main-bg-color, 30%);
   }
 
   &:active {
-    background-color: shade-func($button-main-bg-color, 10%);
+    background-color: tint-func($button-main-bg-color, 20%);
+  }
+
+  &:disabled {
+    color: $button-disabled-text-color;
+
+    background-color: $button-disabled-bg-color;
+
+    cursor: default;
+  }
+
+  & svg {
+    fill: currentColor;
   }
 }

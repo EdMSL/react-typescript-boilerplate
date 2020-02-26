@@ -1,10 +1,10 @@
 html {
+  @include main-text;
   box-sizing: border-box;
   height: 100%;
 }
 
 body {
-  @include main-text;
   @include reset-indents;
 }
 

@@ -328,6 +328,7 @@ module.exports = {
           "visibility",
           "opacity",
           "filter",
+          "appearance",
           "cursor",
         ],
       },
