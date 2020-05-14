@@ -1,28 +1,31 @@
 import { USER_TYPES } from '$modules/user/types';
 import { IUserRootState } from '$modules/user/reducer';
 
-interface IActionReturnType<T> {
+interface IActionReturnType {
   type: string,
-  payload?: T,
+}
+
+interface IActionPayloadReturnType<T> extends IActionReturnType {
+  payload: T,
 }
 
 export const minimizeSidebar = (
   isSidebarMinimized: IUserRootState['isSidebarMinimized'],
-): IActionReturnType<typeof isSidebarMinimized> => ({
+): IActionPayloadReturnType<typeof isSidebarMinimized> => ({
   type: USER_TYPES.MINIMIZE_SIDEBAR,
   payload: isSidebarMinimized,
 });
 
 export const getUserAvatar = (
   userAvatar: IUserRootState['userAvatar'],
-): IActionReturnType<typeof userAvatar> => ({
+): IActionPayloadReturnType<typeof userAvatar> => ({
   type: USER_TYPES.GET_USER_AVATAR,
   payload: userAvatar,
 });
 
 export const setRequestError = (
   requestError: IUserRootState['requestError'],
-): IActionReturnType<typeof requestError> => ({
+): IActionPayloadReturnType<typeof requestError> => ({
   type: USER_TYPES.SET_REQUEST_ERROR,
   payload: requestError,
 });
