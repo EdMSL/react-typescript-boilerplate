@@ -2,7 +2,11 @@ import { AxiosPromise, AxiosResponse } from 'axios';
 
 import { client } from '$api/config';
 import { ApiRequestUrl, ApiErrorStatusCode } from '$api/constants';
-import { IRequestError } from '$modules/user/reducer';
+
+export interface IRequestError {
+  status: number,
+  text: string,
+}
 
 const parseResult = (result: AxiosResponse): AxiosResponse['data'] => result && result.data;
 

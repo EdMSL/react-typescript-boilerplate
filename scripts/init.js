@@ -151,7 +151,6 @@ const utilsFiles = fs.readdirSync(path.resolve(__dirname, '../src/utils/'));
 const contentImagesFiles = fs.readdirSync(path.resolve(__dirname, '../src/assets/images/content'));
 const decorationImagesFiles = fs.readdirSync(path.resolve(__dirname, '../src/assets/images/decoration'));
 const componentsFiles = fs.readdirSync(path.resolve(__dirname, '../src/components'));
-const userModuleFiles = fs.readdirSync(path.resolve(__dirname, '../src/modules/user'));
 const testFiles = fs.readdirSync(path.resolve(__dirname, '../src/tests'));
 
 utilsFiles.forEach((file) => fs.unlinkSync(path.resolve(__dirname, '../src/utils/', file)));
@@ -163,6 +162,4 @@ componentsFiles.forEach((file) => {
     deleteFolderRecursive(path.resolve(__dirname, '../src/components', file));
   }
 });
-userModuleFiles.forEach((file) => {
-  deleteFolderRecursive(path.resolve(__dirname, '../src/modules/user/', file));
-});
+deleteFolderRecursive(path.resolve(__dirname, '../src/modules/user/'));

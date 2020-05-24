@@ -3,11 +3,7 @@ import { createReducer } from 'reduxsauce';
 import * as USER_ACTIONS from '$modules/user/actions';
 import { USER_TYPES } from '$modules/user/types';
 import { DEFAULT_REQUEST_ERROR } from '$constants/defaultParameters';
-
-export interface IRequestError {
-  status: number,
-  text: string,
-}
+import { IRequestError } from '$api/user';
 
 export type IUserRootState = Readonly<{
   isSidebarMinimized: boolean,
