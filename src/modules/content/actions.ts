@@ -9,7 +9,9 @@ interface IActionPayloadReturnType<T> extends IActionReturnType {
   payload: T,
 }
 
-export const changeView = (view: IContentRootState['view']): IActionPayloadReturnType<typeof view> => ({
+export const changeView = (
+  view: IContentRootState['view'],
+): IActionPayloadReturnType<typeof view> => ({
   type: CONTENT_TYPES.CHANGE_VIEW,
   payload: view,
 });

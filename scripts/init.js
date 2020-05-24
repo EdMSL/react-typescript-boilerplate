@@ -114,6 +114,13 @@ export const App = hot(module)(UnconnectedApp);
 
 `);
 
+fs.writeFileSync(path.resolve(__dirname, '../src/containers/App/styles.module.scss'), `
+.router {
+  display: flex;
+}
+
+`);
+
 fs.writeFileSync(path.resolve(__dirname, '../src/modules/content/sagas.ts'), `
 import { SagaIterator } from 'redux-saga';
 import { put, takeLatest } from 'redux-saga/effects';
@@ -142,6 +149,11 @@ export const DEFAULT_REQUEST_ERROR = {
 fs.writeFileSync(path.resolve(__dirname, '../src/styles/resources/colors.scss'), `
 $white: rgb(255, 255, 255);
 $dark-black: rgb(15, 15, 15);
+$black: rgb(32, 32, 32);
+$blue: #2b6ce6;
+
+$text-primary-color: $black;
+$link-main-color: $blue;
 
 `);
 

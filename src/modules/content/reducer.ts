@@ -31,4 +31,4 @@ const INITIAL_STATE: IContentRootState = {
   view: 'react',
 };
 
-export const contentReducer = createReducer(INITIAL_STATE, HANDLERS);
+export const contentReducer = createReducer<IContentRootState>(INITIAL_STATE, HANDLERS);
