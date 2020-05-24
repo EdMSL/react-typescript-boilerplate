@@ -1,4 +1,4 @@
-export const ApiGithubRequestUrl = {
+export const ApiRequestUrl = {
   BASE: 'https://api.github.com/',
   GET_USER: 'users/',
 };

@@ -1,7 +1,7 @@
 import { AxiosPromise, AxiosResponse } from 'axios';
 
 import { client } from '$api/config';
-import { ApiGithubRequestUrl, ApiErrorStatusCode } from '$api/constants';
+import { ApiRequestUrl, ApiErrorStatusCode } from '$api/constants';
 import { IRequestError } from '$modules/user/reducer';
 
 const parseResult = (result: AxiosResponse): AxiosResponse['data'] => result && result.data;
@@ -40,7 +40,7 @@ export const apiGetUser = (data = {}): AxiosPromise => (
   client({
     data,
     method: 'GET',
-    url: `${ApiGithubRequestUrl.GET_USER}EdMSL`,
+    url: `${ApiRequestUrl.GET_USER}EdMSL`,
   })
     .then(parseResult)
     .catch(onError)

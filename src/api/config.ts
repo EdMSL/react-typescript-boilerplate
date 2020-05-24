@@ -1,10 +1,10 @@
 import axios, { AxiosPromise, AxiosRequestConfig } from 'axios';
 
-import { ApiGithubRequestUrl } from './constants';
+import { ApiRequestUrl } from './constants';
 
 export const client = (props: AxiosRequestConfig): AxiosPromise => axios({
   method: props.method,
-  baseURL: `${ApiGithubRequestUrl.BASE}/`,
+  baseURL: `${ApiRequestUrl.BASE}/`,
   url: props.url,
   headers: {
     'Content-Type': 'application/json',
