@@ -157,6 +157,28 @@ $link-main-color: $blue;
 
 `);
 
+fs.writeFileSync(path.resolve(__dirname, '../.gitignore'), `
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы редактора
+.idea
+
+# Вспомогательные файлы
+*.log*
+node_modules/
+/npm-debug.log
+
+# Папка с собранными файлами проекта
+build/
+dist/
+
+# Папка с доп. файлами для проекта
+data/
+
+`);
+
 fs.unlinkSync(path.resolve(__dirname, '../src/constants/images.ts'));
 
 const utilsFiles = fs.readdirSync(path.resolve(__dirname, '../src/utils/'));
