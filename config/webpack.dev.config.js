@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 const css = require('./webpack/rules/css');
 const js = require('./webpack/rules/js-jsx');
 const ts = require('./webpack/rules/ts-tsx');
