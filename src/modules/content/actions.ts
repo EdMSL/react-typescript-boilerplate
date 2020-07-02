@@ -1,5 +1,5 @@
 import { CONTENT_TYPES } from '$modules/content/types';
-import { IContentRootState } from '$modules/content/reducer';
+import { IContentRootState } from '$modules/content/interfaces';
 
 interface IActionReturnType {
   type: string,

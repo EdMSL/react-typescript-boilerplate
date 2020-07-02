@@ -1,5 +1,5 @@
 import { USER_TYPES } from '$modules/user/types';
-import { IUserRootState } from '$modules/user/reducer';
+import { IUserRootState } from '$modules/user/interfaces';
 
 interface IActionReturnType {
   type: string,

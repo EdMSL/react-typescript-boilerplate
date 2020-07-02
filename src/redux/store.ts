@@ -12,8 +12,10 @@ import createSagaMiddleware from 'redux-saga';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 
-import { userReducer, IUserRootState } from '$modules/user/reducer';
-import { contentReducer, IContentRootState } from '$modules/content/reducer';
+import { userReducer } from '$modules/user/reducer';
+import { IUserRootState } from '$modules/user/interfaces';
+import { contentReducer } from '$modules/content/reducer';
+import { IContentRootState } from '$modules/content/interfaces';
 import userSaga from '$modules/user/sagas';
 import contentSaga from '$modules/content/sagas';
 

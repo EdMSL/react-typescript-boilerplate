@@ -5,7 +5,7 @@ import { Icon } from '$components/UI/Icon';
 import { Button } from '$components/UI/Button';
 import { Image } from '$constants/images';
 import * as USER_ACTIONS from '$modules/user/actions';
-import { IUserRootState } from '$modules/user/reducer';
+import { IUserRootState } from '$modules/user/interfaces';
 
 const styles = require('./styles.module.scss');
 
