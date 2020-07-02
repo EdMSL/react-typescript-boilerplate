@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
+
 const fonts = require('./webpack/rules/fonts');
 const images = require('./webpack/rules/images');
 const copyFavicons = require('./webpack/plugins/copy-favicons');

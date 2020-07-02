@@ -27,6 +27,19 @@ module.exports = {
     "react-hooks",
     "@typescript-eslint",
   ],
+  settings: {
+    "import/resolver": {
+      webpack: {
+        config: "./config/webpack.base.config.js",
+      }
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"],
+    },
+    react: {
+      version: "detect",
+    },
+  },
   rules: {
     "linebreak-style": 0,
     "max-len": [1, 100],
@@ -40,7 +53,7 @@ module.exports = {
     }],
     "space-before-function-paren": [1, "never"],
 
-    // "import/extensions": [2, "always", { "js": "never", "ts": "never", "tsx": "never" }],
+    "import/extensions": [2, "always", { "js": "never", "ts": "never", "tsx": "never" }],
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
     "import/order": [1, {
@@ -96,15 +109,5 @@ module.exports = {
     "@typescript-eslint/no-var-requires": 0,
   },
   globals: {
-  },
-  settings: {
-    "import/resolver": {
-      webpack: {
-        config: "./config/webpack.base.config.js",
-      }
-    },
-    react: {
-      version: "detect",
-    },
   },
 }
