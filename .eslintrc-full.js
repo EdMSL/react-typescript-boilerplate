@@ -40,7 +40,7 @@ module.exports = {
     }],
     "space-before-function-paren": [1, "never"],
 
-    "import/extensions": [2, "always", { "js": "never", "ts": "never", "tsx": "never" }],
+    // "import/extensions": [2, "always", { "js": "never", "ts": "never", "tsx": "never" }],
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
     "import/order": [1, {

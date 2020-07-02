@@ -121,7 +121,7 @@ module.exports = {
     "space-infix-ops": 1,
     "spaced-comment": 0,
 
-    "import/extensions": [2, "always", { "js": "never", "ts": "never", "tsx": "never" }],
+    // "import/extensions": [2, "always", { "js": "never", "ts": "never", "tsx": "never" }],
     "import/newline-after-import": 0,
     "import/no-cycle": [2, { maxDepth: 1 }],
     "import/no-extraneous-dependencies": 0,
