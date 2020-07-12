@@ -113,7 +113,7 @@ module.exports = {
     }, {
       allowSingleLineBlocks: true,
     }],
-    quotes: [1, "single", { avoidEscape: true }],
+    "quotes": [1, "single", { avoidEscape: true }],
     "semi-spacing": [1, {
       before: false,
       after: true,

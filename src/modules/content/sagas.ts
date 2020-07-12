@@ -7,7 +7,7 @@ import { getPathNameFromLocationPath } from '$utils/strings';
 import { changeView } from '$modules/content/actions';
 
 function* locationChangeSaga({ payload: { location } }: LocationChangeAction): SagaIterator {
-  yield put(changeView(DefaultView[getPathNameFromLocationPath(location.pathname).toUpperCase()]));
+  // yield put(changeView(DefaultView[getPathNameFromLocationPath(location.pathname).toUpperCase()]));
 }
 
 export default function* contentSaga(): SagaIterator {
