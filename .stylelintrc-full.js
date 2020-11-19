@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "stylelint-config-standard",
-    "stylelint-config-prettier",
   ],
   plugins: [
     "stylelint-scss",
@@ -25,37 +24,26 @@ module.exports = {
     "block-no-empty": [true, {
       "message": "No empty rule blocks.",
     }],
-    "comment-no-empty": [true, {
-      "message": "No empty comment",
-    }],
-    "comment-empty-line-before": "never", // --fix
-    "declaration-empty-line-before": ["never", { // --fix
+    "comment-empty-line-before": "never",
+    "declaration-empty-line-before": ["never", {
       "ignore": ["after-comment", "after-declaration"],
     }],
     "declaration-no-important": true,
     "font-family-name-quotes": "always-unless-keyword",
     "font-weight-notation": "numeric",
-    "function-calc-no-invalid": true,
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "max-line-length": 100,
     "media-feature-name-no-vendor-prefix": true,
+    "no-unknown-animations": true,
     "number-max-precision": [0, {
       "ignoreUnits": /^(?!px).*$/,
       "message": "Value in px mast be integer number.",
     }],
-    "no-unknown-animations": true,
     "property-no-vendor-prefix": [true, {
       "message": "Not needed with autoprefixer",
     }],
-    "time-min-milliseconds": [300, {
-      "message": "No very fast animation",
-    }],
-    "shorthand-property-no-redundant-values": true, // --fix
-    "value-no-vendor-prefix": [true, {
-      "message": "Not needed with autoprefixer",
-    }],
-    "rule-empty-line-before": ["always", { // --fix
+    "rule-empty-line-before": ["always", {
       "ignore": ["first-nested"],
     }],
     "selector-max-compound-selectors": 2,
@@ -63,7 +51,14 @@ module.exports = {
     "selector-pseudo-class-no-unknown": [true, {
       ignorePseudoClasses: ["global"],
     }],
-    "value-keyword-case": "lower", // --fix
+    "shorthand-property-no-redundant-values": true, // --fix
+    "time-min-milliseconds": [300, {
+      "message": "No very fast animation",
+      "ignore": ["delay"],
+    }],
+    "value-no-vendor-prefix": [true, {
+      "message": "Not needed with autoprefixer",
+    }],
     "aditayvm/at-rule-no-children": true,
     "sh-waqar/declaration-use-variable": [[
       "color",

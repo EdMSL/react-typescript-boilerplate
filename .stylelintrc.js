@@ -23,9 +23,8 @@ module.exports = {
     "block-no-empty": [true, {
       "message": "No empty rule blocks.",
     }],
-    "comment-no-empty": [true, {
-      "message": "No empty comment",
-    }],
+    "color-function-notation": "legacy",
+    "declaration-block-no-duplicate-properties": true,
     "declaration-no-important": true,
     "font-family-name-quotes": "always-unless-keyword",
     "font-weight-notation": "numeric",
@@ -39,12 +38,14 @@ module.exports = {
       "message": "Value in px mast be integer number.",
     }],
     "no-extra-semicolons": null,
+
     "no-unknown-animations": true,
     "property-no-vendor-prefix": [true, {
       "message": "Not needed with autoprefixer",
     }],
     "time-min-milliseconds": [300, {
       "message": "No very fast animation",
+      "ignore": ["delay"],
     }],
     "value-no-vendor-prefix": [true, {
       "message": "Not needed with autoprefixer",
