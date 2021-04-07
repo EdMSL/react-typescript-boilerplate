@@ -1,4 +1,3 @@
-const isWsl = require('is-wsl');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = function() {
@@ -22,8 +21,6 @@ module.exports = function() {
         ascii_only: true,
       },
     },
-    parallel: !isWsl,
-    cache: true,
-    sourceMap: false,
+    parallel: true,
   });
 };

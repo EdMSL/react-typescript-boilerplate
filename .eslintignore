@@ -2,6 +2,6 @@
 build/*
 /.vscode
 node_modules
-# config/webpack.base.config.js
-# config/webpack.build.config.js
-# config/webpack.dev.config.js
+config/webpack.base.config.js
+config/webpack.build.config.js
+config/webpack.dev.config.js

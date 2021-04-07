@@ -18,8 +18,8 @@ module.exports = function (mode, resourcesPath) {
         loader: 'postcss-loader',
         options: {
           sourceMap: false,
-          config: {
-            path: 'config/webpack/postcss.config.js',
+          postcssOptions: {
+            config: 'config/webpack/postcss.config.js',
           },
         },
       },
@@ -62,7 +62,7 @@ module.exports = function (mode, resourcesPath) {
               localIdentName: '[local]___[hash:base64:5]',
             },
           }),
-        }
+        },
       ],
     },
   };

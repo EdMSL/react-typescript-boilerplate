@@ -1,6 +1,6 @@
-const webpack = require('webpack');
 const path = require('path');
-const merge = require('webpack-merge');
+const webpack = require('webpack');
+const { merge } = require('webpack-merge');
 
 const fonts = require('./webpack/rules/fonts');
 const images = require('./webpack/rules/images');
@@ -14,9 +14,9 @@ const PATHS = {
 };
 
 const plugins = [
-  new webpack.WatchIgnorePlugin(['build']),
+  new webpack.WatchIgnorePlugin({ paths: ['build'] }),
   copyFavicons(`${PATHS.src}/public`),
-  ...generateHtmlPlugins(`${PATHS.src}/public`),
+  generateHtmlPlugins(`${PATHS.src}/public`, 'New App'),
 ];
 
 const configuration = merge([
@@ -27,7 +27,6 @@ const configuration = merge([
       filename: 'js/index.js',
       sourceMapFilename: '[name].js.map',
       publicPath: '/',
-      futureEmitAssets: true,
     },
     externals: {
       paths: PATHS,
@@ -55,7 +54,6 @@ const configuration = merge([
     stats: {
       all: false,
       modules: true,
-      maxModules: 0,
       errors: true,
       warnings: false,
       moduleTrace: true,

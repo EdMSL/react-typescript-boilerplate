@@ -1,11 +1,18 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = function (path) {
-  return new CopyWebpackPlugin([
-    {
-      from: `${path}/*`,
+  return new CopyWebpackPlugin({
+    patterns: [{
+      from: '**/*',
       to: '[name].[ext]',
-      ignore: /\.html$/,
-    },
-  ]);
+      context: `${path}/`,
+      filter: async (resourcePath) => {
+        if (/\.html$/.test(resourcePath)) {
+          return false;
+        }
+
+        return true;
+      },
+    }],
+  });
 };
