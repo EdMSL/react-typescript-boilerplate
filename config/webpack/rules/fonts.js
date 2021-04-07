@@ -4,13 +4,10 @@ module.exports = function() {
       rules: [
         {
           test: /\.(eot|ttf|woff|woff2|otf)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              publicPath: '../fonts',
-              outputPath: 'fonts/',
-            },
+          type: 'asset/resource',
+          generator: {
+            filename: 'fonts/[name].[ext]',
+            publicPath: '../fonts',
           },
         },
       ],
