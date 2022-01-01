@@ -61,4 +61,4 @@ for separate running typescript compiler, eslint and stylelint with fixing error
 
 ### License
 
-This bilerplate is [MIT licensed](./LICENSE).
+This boilerplate is [MIT licensed](./LICENSE).
