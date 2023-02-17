@@ -25,7 +25,8 @@ const configuration = merge([
     output: {
       path: `${PATHS.dist}`,
       filename: 'js/index.js',
-      sourceMapFilename: '[name].js.map',
+      // sourceMapFilename: '[name].[hash:8].map',
+      // chunkFilename: '[id].[hash:8].js',
       publicPath: '/',
     },
     externals: {
@@ -33,15 +34,15 @@ const configuration = merge([
     },
     resolve: {
       alias: {
-        'react-dom': '@hot-loader/react-dom',
         $webpack: path.resolve(__dirname, `${PATHS.conf}/webpack/`),
         $api: path.resolve(__dirname, `${PATHS.src}/api/`),
         $components: path.resolve(__dirname, `${PATHS.src}/components/`),
         $constants: path.resolve(__dirname, `${PATHS.src}/constants/`),
         $containers: path.resolve(__dirname, `${PATHS.src}/containers/`),
         $images: path.resolve(__dirname, `${PATHS.src}/assets/images/`),
-        $modules: path.resolve(__dirname, `${PATHS.src}/modules/`),
-        $redux: path.resolve(__dirname, `${PATHS.src}/redux/`),
+        $hooks: path.resolve(__dirname, `${PATHS.src}/hooks/`),
+        $store: path.resolve(__dirname, `${PATHS.src}/store/`),
+        $types: path.resolve(__dirname, `${PATHS.src}/types/`),
         $styles: path.resolve(__dirname, `${PATHS.src}/styles/`),
         $utils: path.resolve(__dirname, `${PATHS.src}/utils/`),
       },

@@ -1,19 +1,21 @@
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+// const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const css = require('./webpack/rules/css');
-const js = require('./webpack/rules/js-jsx');
 const ts = require('./webpack/rules/ts-tsx');
 const devserver = require('./webpack/devserver');
-const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
+// const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
 const baseWebpackConfig = require('./webpack.base.config');
 
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
-  new CaseSensitivePathsPlugin(),
-  SVGSpritePlugin(process.env.NODE_ENV, `${baseWebpackConfig.externals.paths.src}/assets/images/sprite`),
-];
+  new ReactRefreshWebpackPlugin(),
+  // new CaseSensitivePathsPlugin(),
+  // SVGSpritePlugin(process.env.NODE_ENV, `${baseWebpackConfig.externals.paths.src}/assets/images/sprite`),
+].filter(Boolean);
+
 
 const devWebpackConfig = merge([
   baseWebpackConfig,
@@ -26,8 +28,7 @@ const devWebpackConfig = merge([
     plugins,
   },
   css('development', `${baseWebpackConfig.externals.paths.src}/styles/resources`),
-  js(),
-  ts(),
+  ts(process.env),
   devserver(),
 ]);
 

@@ -11,16 +11,14 @@ module.exports = function() {
       port: 8081,
       hot: true,
       compress: true,
-      open: browserGoogleChrome[OS] || true,
-      clientLogLevel: 'none',
-      contentBase: 'src/public',
-      watchContentBase: true,
-      publicPath: '/',
-      historyApiFallback: true,
-      overlay: {
-        warnings: false,
-        errors: true,
+      open: true,
+      // clientLogLevel: 'none',
+      // contentBase: 'src/public',
+      // watchContentBase: true,
+      static: {
+        publicPath: '/',
       },
+      historyApiFallback: true,
     },
   };
 };

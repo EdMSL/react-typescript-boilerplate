@@ -1,11 +1,11 @@
 const { merge } = require('webpack-merge');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const CssExtractPlugin = require('./webpack/plugins/mini-css-extract-plugin');
 const TerserPlugin = require('./webpack/plugins/terser-plugin');
 const OptimizeCSSAssetsPlugin = require('./webpack/plugins/optimize-css-assets-plugin');
 const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
 const css = require('./webpack/rules/css');
-const js = require('./webpack/rules/js-jsx');
 const ts = require('./webpack/rules/ts-tsx');
 const baseWebpackConfig = require('./webpack.base.config');
 
@@ -19,16 +19,22 @@ const buildWebpackConfig = merge([
   {
     mode: 'production',
     optimization: {
-      minimize: true,
-      minimizer: [
-        TerserPlugin(),
-        OptimizeCSSAssetsPlugin(),
-      ],
-    },
+        minimize: true,
+        minimizer: [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                keep_infinity: true,
+              },
+            },
+          }),
+          // OptimizeCSSAssetsPlugin(),
+        ],
+        nodeEnv: (env && env.nodeEnv) || 'production',
+      },
     plugins,
   },
-  js(),
-  ts(),
+  ts(process.env),
   css('production', `${baseWebpackConfig.externals.paths.src}/styles/resources`),
 ]);
 

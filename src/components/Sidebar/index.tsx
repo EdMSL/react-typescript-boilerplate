@@ -1,26 +1,23 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import classNames from 'classnames';
 
+import styles from './styles.module.scss';
 import { Icon } from '$components/UI/Icon';
 import { Button } from '$components/UI/Button';
 import { Image } from '$constants/images';
-import * as USER_ACTIONS from '$modules/user/actions';
-import { IUserRootState } from '$modules/user/interfaces';
-
-const styles = require('./styles.module.scss');
 
 interface IProps {
-  isSidebarMinimized: IUserRootState['isSidebarMinimized'],
-  userAvatar: IUserRootState['userAvatar'],
-  minimizeSidebar: typeof USER_ACTIONS.minimizeSidebar,
+  isSidebarMinimized: boolean,
+  userAvatar: string,
+  minimizeSidebar: (isMinimize: boolean) => void,
 }
 
-export const Sidebar: React.FunctionComponent<IProps> = ({
+export const Sidebar: React.FC<IProps> = ({
   isSidebarMinimized,
-  minimizeSidebar,
   userAvatar,
+  minimizeSidebar,
 }) => {
-  const onMinimizeSidebarBtnClick = React.useCallback(() => {
+  const onMinimizeSidebarBtnClick = useCallback(() => {
     minimizeSidebar(!isSidebarMinimized);
   }, [isSidebarMinimized, minimizeSidebar]);
 

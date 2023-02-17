@@ -7,7 +7,6 @@ The following packages are used here:
 * **[React](https://reactjs.org/)**
 * **[Redux](https://redux.js.org/)** (**[React-Redux](https://github.com/reduxjs/react-redux)**)
 * **[Redux Saga](https://github.com/redux-saga/redux-saga/)**
-* **[Reduxsauce](https://github.com/infinitered/reduxsauce/)**
 * **[Redux Persist](https://github.com/rt2zz/redux-persist/)**
 * **[Connected React Router](https://github.com/supasate/connected-react-router/)**
 * **[Axios](https://github.com/axios/axios/)**

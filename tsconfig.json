@@ -5,29 +5,60 @@
     "baseUrl": ".",
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": [ "es2015", "dom", "es6" ],
+    "lib": [
+      "es2015",
+      "dom",
+      "es6"
+    ],
     "module": "commonjs",
-    "noEmit": true,
+    // "noEmit": true,
     "noImplicitAny": false,
     "outDir": "./build/",
     "target": "es6",
     "sourceMap": true,
     "paths": {
-      "$webpack/*": [ "config/webpack/*" ],
-      "$api/*": [ "src/api/*" ],
-      "$components/*": [ "src/components/*" ],
-      "$containers/*": [ "src/containers/*" ],
-      "$constants/*": [ "src/constants/*" ],
-      "$images/*": [ "src/assets/images/*" ],
-      "$modules/*": [ "src/modules/*" ],
-      "$redux/*": [ "src/redux/*" ],
-      "$styles/*": [ "src/styles/*" ],
-      "$utils/*": [ "src/utils/*" ]
+      "$webpack/*": [
+        "config/webpack/*"
+      ],
+      "$api/*": [
+        "src/api/*"
+      ],
+      "$components/*": [
+        "src/components/*"
+      ],
+      "$containers/*": [
+        "src/containers/*"
+      ],
+      "$constants/*": [
+        "src/constants/*"
+      ],
+      "$images/*": [
+        "src/assets/images/*"
+      ],
+      "$hooks/*": [
+        "src/hooks/*"
+      ],
+      "$store/*": [
+        "src/store/*"
+      ],
+      "$types/*": [
+        "src/types/*"
+      ],
+      "$styles/*": [
+        "src/styles/*"
+      ],
+      "$utils/*": [
+        "src/utils/*"
+      ]
     }
   },
   "include": [
     "src/**/*",
-    "config/**/*"
+    "config/**/*",
+    "./typings.d.ts",
   ],
-  "exclude": ["node_modules", "./build/**/*"]
+  "exclude": [
+    "node_modules",
+    "./build/**/*"
+  ]
 }
