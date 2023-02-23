@@ -45,15 +45,17 @@ export const App: React.FC = () => {
         >
           <NavLink
             to={PathName.REACT_VIEW}
-            className={classNames(styles.router__button, styles['router__button--react'])}
-            // activeClassName={styles['router__button--react--active']}
+            className={({ isActive }) =>
+              classNames(styles.router__button, styles['router__button--react'], isActive ? styles['router__button--react--active'] : '')
+            }
           >
             React
           </NavLink>
           <NavLink
             to={PathName.REDUX_VIEW}
-            className={classNames(styles.router__button, styles['router__button--redux'])}
-            // activeClassName={styles['router__button--redux--active']}
+            className={({ isActive }) =>
+              classNames(styles.router__button, styles['router__button--redux'], isActive ? styles['router__button--redux--active'] : '')
+            }
           >
             Redux
           </NavLink>

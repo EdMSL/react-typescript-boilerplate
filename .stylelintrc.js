@@ -20,7 +20,8 @@ module.exports = {
       "ignore": ["after-comment", "after-declaration"],
     }],
     "import-notation": "string",
-    "function-no-unknown": [true, {ignoreFunctions: /darken/}],
+    "function-no-unknown": [true, {ignoreFunctions: /(darken|.*-func)/}],
+    "selector-class-pattern": /^([a-z][a-z0-9]*)([_-]{1,2}[a-z0-9]+)*$/,
     "order/order": [
       [
         "custom-properties",
