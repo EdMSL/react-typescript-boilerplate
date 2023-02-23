@@ -10,9 +10,12 @@ import {
 import { apiGetUser } from '$api/user';
 import { setUserAvatar, setRequestError } from '$store/user';
 import { DEFAULT_REQUEST_ERROR } from '$constants/defaultParameters';
+import { IAppState } from '$types/state';
+
+const getAppState = (state: IAppState): IAppState => state;
 
 function* getUserSaga(): SagaIterator {
-  const { user: { userAvatar } } = yield select((state) => state);
+  const { USER : { userAvatar } }: ReturnType<typeof getAppState> = yield select(getAppState);
 
   if (!userAvatar) {
     const userData = yield call(apiGetUser);

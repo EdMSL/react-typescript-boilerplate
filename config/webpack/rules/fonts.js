@@ -7,7 +7,6 @@ module.exports = function() {
           type: 'asset/resource',
           generator: {
             filename: 'fonts/[name].[ext]',
-            publicPath: '../fonts',
           },
         },
       ],

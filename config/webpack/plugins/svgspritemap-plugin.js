@@ -3,9 +3,7 @@ const paths = require('../paths');
 
 module.exports = function (mode, path) {
   if (mode === 'production') {
-    return new SVGSpritemapPlugin([
-      `${path}/**/*.svg`,
-    ], {
+    return new SVGSpritemapPlugin(`${path.replace(/\\/g, '/')}/**/*.svg`, {
       output: {
         filename: paths.SVG_SPRITE,
         chunk: {
@@ -26,9 +24,7 @@ module.exports = function (mode, path) {
     });
   }
 
-  return new SVGSpritemapPlugin([
-    `${path}/**/*.svg`,
-  ], {
+  return new SVGSpritemapPlugin(`${path.replace(/\\/g, '/')}/**/*.svg`, {
     output: {
       filename: paths.SVG_SPRITE,
       svg4everybody: false,

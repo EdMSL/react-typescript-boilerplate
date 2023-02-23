@@ -7,13 +7,13 @@ import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 
 const userPersistConfig: PersistConfig<IUserRootState> = {
-  key: 'user',
+  key: NameSpace.User,
   whitelist: ['isSidebarMinimized', 'userAvatar'],
   storage,
 };
 
 const contentPersistConfig: PersistConfig<IContentRootState> = {
-  key: 'content',
+  key: NameSpace.Content,
   whitelist: [],
   storage,
 };

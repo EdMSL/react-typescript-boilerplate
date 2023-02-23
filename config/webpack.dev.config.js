@@ -6,14 +6,14 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 const css = require('./webpack/rules/css');
 const ts = require('./webpack/rules/ts-tsx');
 const devserver = require('./webpack/devserver');
-// const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
+const SVGSpritePlugin = require('./webpack/plugins/svgspritemap-plugin');
 const baseWebpackConfig = require('./webpack.base.config');
 
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new ReactRefreshWebpackPlugin(),
   // new CaseSensitivePathsPlugin(),
-  // SVGSpritePlugin(process.env.NODE_ENV, `${baseWebpackConfig.externals.paths.src}/assets/images/sprite`),
+  SVGSpritePlugin(process.env.NODE_ENV, `${baseWebpackConfig.externals.paths.src}\\assets\\images\\sprite`),
 ].filter(Boolean);
 
 
