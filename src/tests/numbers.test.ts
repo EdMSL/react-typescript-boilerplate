@@ -14,7 +14,7 @@ describe('Returns a random integer in the given range', function () {
       expect((function () {
         const number = getRandomInt();
         return number >= DEFAULT_MIN_INT && number <= DEFAULT_MAX_INT;
-      })());
+      })()).toBe(true);
     }
   });
 
@@ -23,7 +23,7 @@ describe('Returns a random integer in the given range', function () {
       expect((function () {
         const number = getRandomInt(20, 50);
         return number >= 20 && number <= 50;
-      })());
+      })()).toBe(true);
     }
   });
 
@@ -32,7 +32,7 @@ describe('Returns a random integer in the given range', function () {
       expect((function () {
         const number = getRandomInt(39, 15);
         return number >= 15 && number <= 39;
-      })());
+      })()).toBe(true);
     }
   });
   it('return true if number is greater than or equal to -35 and is less than or equal to -8', function () {
@@ -40,7 +40,7 @@ describe('Returns a random integer in the given range', function () {
       expect((function () {
         const number = getRandomInt(-35, -8);
         return number >= -35 && number <= -8;
-      })());
+      })()).toBe(true);
     }
   });
   it(`return true if number is greater than or equal to default max ${DEFAULT_MAX_INT} and is less than or equal to 64`, function () {
@@ -48,7 +48,7 @@ describe('Returns a random integer in the given range', function () {
       expect((function () {
         const number = getRandomInt(64);
         return number >= DEFAULT_MAX_INT && number <= 64;
-      })());
+      })()).toBe(true);
     }
   });
 });
@@ -59,7 +59,7 @@ describe('Returns a random fractional number in the given range', function () {
       expect((function () {
         const number = getRandomFractional();
         return number >= DEFAULT_MIN_FRACTIONAL && number <= DEFAULT_MAX_FRACTIONAL;
-      })());
+      })()).toBe(true);
     }
   });
   it('return true if number is greater than or equal to 5 and is less than or equal to 7', function () {
@@ -67,7 +67,7 @@ describe('Returns a random fractional number in the given range', function () {
       expect((function () {
         const number = getRandomFractional(5, 7);
         return number >= 5 && number <= 7;
-      })());
+      })()).toBe(true);
     }
   });
   it('return true if number is greater than or equal to 2 and is less than or equal to 6', function () {
@@ -75,7 +75,7 @@ describe('Returns a random fractional number in the given range', function () {
       expect((function () {
         const number = getRandomFractional(6, 2);
         return number >= 2 && number <= 6;
-      })());
+      })()).toBe(true);
     }
   });
   it('return true if number is greater than or equal to -6 and is less than or equal to -3', function () {
@@ -83,7 +83,7 @@ describe('Returns a random fractional number in the given range', function () {
       expect((function () {
         const number = getRandomFractional(-6, -3);
         return number >= -6 && number <= -3;
-      })());
+      })()).toBe(true);
     }
   });
   it(`return true if number is greater than or equal to default max ${DEFAULT_MAX_FRACTIONAL} and is less than or equal to 3`, function () {
@@ -91,7 +91,7 @@ describe('Returns a random fractional number in the given range', function () {
       expect((function () {
         const number = getRandomFractional(3);
         return number >= DEFAULT_MAX_FRACTIONAL && number <= 3;
-      })());
+      })()).toBe(true);
     }
   });
 });

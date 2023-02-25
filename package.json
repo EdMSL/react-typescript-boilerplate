@@ -30,30 +30,13 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --mode development --config=./config/webpack.dev.config.js --progress",
     "build": "rm -rf ./build/* && cross-env NODE_ENV=production webpack --env production --config=./config/webpack.build.config.js --progress",
-    "postcss": "postcss src/**/*.scss --config ./config/postcss.config.js --replace",
     "stylelint": "stylelint src/**/*.scss --config ./.stylelintrc-full.js --syntax scss --fix",
     "eslint": "eslint --config ./.eslintrc.js src --ext .ts,.tsx,.js,.jsx --fix",
     "tslint": "tsc --project tsconfig.json",
     "lint": "npm run stylelint && npm run eslint && npm run tslint",
-    "test": "mocha --no-package --config ./.mocharc.js",
+    "test": "jest --config=./jest.config.js",
     "init": "node ./scripts/init.js && git remote rm origin",
     "finish": "npm shrinkwrap"
-  },
-  "lint-staged": {
-    "src/**/*.scss": [
-      "npm run postcss",
-      "npm run stylelint",
-      "git add"
-    ],
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run eslint",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run tslint && lint-staged"
-    }
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
@@ -90,6 +73,7 @@
     "stylelint-order": "6.0.2",
     "stylelint-scss": "4.4.0",
     "svg-spritemap-webpack-plugin": "4.5.0",
+    "ts-jest": "^29.0.5",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
     "typescript": "4.9.5",

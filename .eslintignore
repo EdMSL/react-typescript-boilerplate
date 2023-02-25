@@ -4,3 +4,4 @@ node_modules
 config/webpack.base.config.js
 config/webpack.build.config.js
 config/webpack.dev.config.js
+jest.config.js

@@ -55,8 +55,7 @@
   "include": [
     "src/**/*",
     "config/**/*",
-    "./typings.d.ts",
-    ".eslintrc.js"
+    "./typings.d.ts"
   ],
   "exclude": [
     "node_modules",
