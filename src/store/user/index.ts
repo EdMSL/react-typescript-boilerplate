@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { IRequestError } from '$api/user';
 import { DEFAULT_REQUEST_ERROR } from '$constants/defaultParameters';
 
@@ -13,7 +13,7 @@ const initialState: IUserRootState = {
   isSidebarMinimized: false,
   userAvatar: '',
   requestError: DEFAULT_REQUEST_ERROR,
-}
+};
 
 export const userSlice = createSlice({
   name: 'user',
@@ -26,12 +26,12 @@ export const userSlice = createSlice({
       state.userAvatar = action.payload;
     },
     setRequestError: (state, action: PayloadAction<IRequestError>) => {
-      state.requestError = action.payload
+      state.requestError = action.payload;
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
 export const { minimizeSidebar, setUserAvatar, setRequestError } = userSlice.actions;
 
-export const userReducer = userSlice.reducer
+export const userReducer = userSlice.reducer;

@@ -1,7 +1,7 @@
 import { getPathNameFromLocationPath } from '$utils/strings';
 
-describe('Return right string', function() {
-  it('return rocket', function() {
+describe('Return right string', () => {
+  it('return rocket', () => {
     expect(getPathNameFromLocationPath('/rocket')).toBe('rocket');
   });
 });

@@ -1,5 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export type IContentRootState = Readonly<{
   view: string,
@@ -17,9 +16,8 @@ export const contentSlice = createSlice({
       state.view = action.payload;
     },
   },
-})
+});
 
-// Action creators are generated for each case reducer function
 export const { changeView } = contentSlice.actions;
 
-export const contentReducer = contentSlice.reducer
+export const contentReducer = contentSlice.reducer;

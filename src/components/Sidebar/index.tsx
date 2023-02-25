@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
-
 import styles from './styles.module.scss';
+
 import { Icon } from '$components/UI/Icon';
 import { Button } from '$components/UI/Button';
 import { Image } from '$constants/images';

@@ -1,10 +1,11 @@
-import {combineReducers} from '@reduxjs/toolkit';
+import { combineReducers } from '@reduxjs/toolkit';
+import storage from 'redux-persist/lib/storage';
+import { PersistConfig } from 'redux-persist';
+import persistReducer from 'redux-persist/es/persistReducer';
+
 import { IUserRootState, userReducer } from '$store/user';
 import { contentReducer, IContentRootState } from '$store/content';
 import { NameSpace } from '$constants/store';
-import { PersistConfig } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import persistReducer from 'redux-persist/es/persistReducer';
 
 const userPersistConfig: PersistConfig<IUserRootState> = {
   key: NameSpace.User,

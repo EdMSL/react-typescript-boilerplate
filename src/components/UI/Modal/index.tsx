@@ -1,9 +1,8 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
+import styles from './styles.module.scss';
 
 import { Button } from '$components/UI/Button';
-
-const styles = require('./styles.module.scss');
 
 interface IComponentState {
   isOpen: boolean,

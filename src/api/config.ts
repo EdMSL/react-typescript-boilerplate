@@ -1,5 +1,4 @@
 import axios, { AxiosPromise, AxiosRequestConfig } from 'axios';
-
 import { ApiRequestUrl } from './constants';
 
 export const client = (props: AxiosRequestConfig): AxiosPromise => axios({

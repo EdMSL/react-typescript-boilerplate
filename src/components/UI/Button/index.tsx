@@ -1,7 +1,6 @@
 import React, { ReactElement, memo } from 'react';
 import classNames from 'classnames';
-
-const styles = require('./styles.module.scss');
+import styles from './styles.module.scss';
 
 interface IButtonProps {
   children: string | ReactElement | [string | ReactElement, string | ReactElement],

@@ -15,7 +15,7 @@ import { IAppState } from '$types/state';
 const getAppState = (state: IAppState): IAppState => state;
 
 function* getUserSaga(): SagaIterator {
-  const { USER : { userAvatar } }: ReturnType<typeof getAppState> = yield select(getAppState);
+  const { USER: { userAvatar } }: ReturnType<typeof getAppState> = yield select(getAppState);
 
   if (!userAvatar) {
     const userData = yield call(apiGetUser);

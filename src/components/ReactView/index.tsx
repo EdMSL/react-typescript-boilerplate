@@ -1,9 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
+import styles from './styles.module.scss';
 
 import { Image } from '$constants/images';
-
-const styles = require('./styles.module.scss');
 
 export const ReactView: React.FunctionComponent<{}> = () => (
   <React.Fragment>

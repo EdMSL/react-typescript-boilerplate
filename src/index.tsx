@@ -19,5 +19,5 @@ root.render(
     >
       <App />
     </PersistGate>
-  </Provider>
+  </Provider>,
 );
